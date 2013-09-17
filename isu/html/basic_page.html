@@ -1,0 +1,67 @@
+<!DOCTYPE html><html>
+<head><meta charset="UTF-8"><link href='https://dl.dropbox.com/u/57694/documentation/github.css' rel='stylesheet' type='text/css'>
+<style>
+img {
+  zoom:50%;
+}
+img.logo {
+  zoom:100%;
+}
+</style>
+</head><body><p><img class="logo" src="../images/IXM-Transparent-Vertical.jpg" style="float:right; margin:-10px 15px 0 0;" height="90" />
+<img class="logo" src="../images/isu_logo.png" alt="Indiana State University logo" /></p>
+
+<h1 id="creating-a-basic-page">Creating a Basic Page</h1>
+<ol>
+<li><a href="#login">Login</a></li>
+<li><a href="#create-basic-page">Create Basic Page</a></li>
+<li><a href="#create-title">Create title</a></li>
+<li><a href="#copy-content-to-be-migrated">Copy content to be migrated</a></li>
+<li><a href="#paste-into-body-field-and-clean-up">Paste into Body field and clean up</a></li>
+<li><a href="#add-primary-topic">Add Primary Topic</a></li>
+<li><a href="#choose-a-url-alias">Choose a URL alias</a></li>
+<li><a href="#add-to-main-menu">Add to main menu</a></li>
+<li><a href="#save">Save</a></li>
+<li><a href="#publish">Publish</a></li>
+</ol>
+<h2 id="login">Login</h2>
+<p>Navigate to the site and login by going to /user. For instance, if the site is located at www.test.com, you would navigate to www.test.com/user.</p>
+<h2 id="create-basic-page">Create Basic Page</h2>
+<p>In the admin menu bar hover over the "Content" menu item and scroll down to "Add Content", and then over to "Basic Page".</p>
+<p><img alt="alt text" src="http://dl.dropbox.com/u/57694/Screenshots/-97j.png" title="Create Basic Page" /></p>
+<p>This will open the Basic Page creation form.</p>
+<h2 id="create-title">Create title</h2>
+<p>Create a title for the page in the "Title" field. This title will be used to display the content, and also to find the content in the administrative content listing interface.</p>
+<h2 id="copy-content-to-be-migrated">Copy content to be migrated</h2>
+<p>Copy the content from the old site in preparation for entering it into the Basic Page form. This can be done in a variety of ways, and will likely change depending on the particular page being migrated. One way is just to copy the plain text and paste it into the <a href="https://en.wikipedia.org/wiki/WYSIWYG">wysiwyg</a> editor in the Basic Page form.</p>
+<p>Sometimes this isn't ideal, for instance if you want to preserve the actual html markup on the source page. When I want to preserve the markup, I will instead copy it. The technique I usually use is to inspect the html in the browser's developer tools. In Chrome it can look something like this:</p>
+<p>Right-click on the content you want to copy and select "Inspect element"</p>
+<p><img alt="Chrome inspect element context menu" src="http://dl.dropbox.com/u/57694/Screenshots/udl~.png" title="Inspect element" /></p>
+<p>When the "Elements" tab in developer tools opens, I find the parent html element of the content I want to copy and I right-click to select "Copy as HTML"</p>
+<p><img alt="Copy markup from developer tools" src="https://dl.dropboxusercontent.com/u/57694/Screenshots/1ghs.png" title="Copy as HTML" /></p>
+<h2 id="paste-into-body-field-and-clean-up">Paste into Body field and clean up</h2>
+<p>Paste your content into the "Body" field in the Basic Page form. When using the wysiwyg you can paste the plain text or formatted content and then edit it using the editor buttons.</p>
+<p><img alt="Paste content in wysiwyg mode" src="http://dl.dropbox.com/u/57694/Screenshots/9wnt.png" title="Paste content in wysiwyg mode" /></p>
+<p>Sometimes you'll want more control over the markup. In this case, you'll want to select the "Switch to plain text editor" link below the editor field to exit the wysiwyg and go straight to a plain text mode that allows you to enter html directly. When using the approach described above to copy content as html, you'll want to paste it into the field after you've selected plain text editor mode.</p>
+<p><img alt="Paste html in plain text mode" src="http://dl.dropbox.com/u/57694/Screenshots/m_w~.png" title="Paste html in plain text mode" /></p>
+<p>Once you've pasted the content in, either in the wysiwyg editor or directly as html in the plain text editor, you'll most often need to do some clean up. When pasting html in plain text mode, you should remove any custom classes that were being used on the old site for styling purposes. You should also seek to improve the html by removing unnecessary br elements and striving to make the markup as semantic as possible. Perhaps most importantly, you should remove any inline styling so that the site's styles can remain consistent.</p>
+<p><img alt="Clean up html" src="http://dl.dropbox.com/u/57694/Screenshots/o1xx.png" title="Clean up html" /></p>
+<h2 id="add-primary-topic">Add Primary Topic</h2>
+<p>Add appropriate terms in the "Primary Topic" field. This field uses something called a taxonomy to categorize content across the site. This helps us to display related content in various places in the site. By "tagging" this particular page, it can help to organize the site and surface relevant content being created here elsewhere when appropriate.</p>
+<p>The taxonomy that this field uses is a controlled vocabulary, meaning that you cannot enter your own tags here, but rather have to select from the already available tags. You can add new primary topics/tags to the vocabulary, but it has to be done elsewhere.</p>
+<p><img alt="Select primary topic/s" src="https://dl.dropboxusercontent.com/u/57694/Screenshots/mzcd.png" title="Select primary topic/s" /></p>
+<h2 id="choose-a-url-alias">Choose a URL alias</h2>
+<p>In the metadata section at the bottom of the form, enter the correct url alias for the page based on your sitemap. The url alias is what determines the path where the page will be located. In Drupal, all pieces of content have system paths. These system paths can then be aliased to create a new path for that content that you can define. The system paths for ordinary content like a Basic Page are /node/[node id]. Each new piece of content is called a "node" and each node has a unique identifying integer id. For example, the first piece of content created in any site will have a system path of /node/1.</p>
+<p>Aliases are automatically generated by default, so you'll need to uncheck the "Generate automatic url alias" checkbox to allow your own manually defined alias to take effect.</p>
+<p><img alt="Manually enter url alias" src="http://dl.dropbox.com/u/57694/Screenshots/038s.png" title="Manually enter url alias" /></p>
+<h2 id="add-to-main-menu">Add to main menu</h2>
+<p>Ordinarily when you're creating a Basic Page, that page belongs somewhere in the overall sitemap. As a result, it needs to be placed in the main menu for the site. This menu contains all components of the site's hierarchy. Where the item is placed in the site's hierarchy should be directly correlated to the url alias chosen for the page. For example, a page located at</p>
+<p>/about/fastfacts</p>
+<p>should be placed as a first child of the "About" page (/about) in the menu. You select the page's location by selecting the appropriate parent page from the "Parent item" select element.</p>
+<p><img alt="Place the page in the main menu" src="http://dl.dropbox.com/u/57694/Screenshots/_wzj.png" title="Place the page in the main menu" /></p>
+<h2 id="save">Save</h2>
+<p>Save the form as a draft. This means that it is not published and is not available to the public, but all of your changes are preserved.</p>
+<h2 id="publish">Publish</h2>
+<p>Once all revisions are complete and you're ready to publish the page to the public, go back into the edit form and select from the "Publishing options" tab in the metadata section at the bottom. Change the "Moderation state" to "Published".</p>
+<p><img alt="Publish the page" src="http://dl.dropbox.com/u/57694/Screenshots/05fr.png" title="Publish the page" /></p>
+</body>
