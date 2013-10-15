@@ -19,3 +19,11 @@ Markdown is a simple and expressive formatting language that makes it easy to wr
 - [Markdown syntax](http://daringfireball.net/projects/markdown/syntax)
 - [Markdown live preview](http://markdownlivepreview.com/)
 - [Sublime Text markdown preview plugin](https://github.com/revolunet/sublimetext-markdown-preview)
+
+## Future
+
+Right now this repository is just a collection point. The future path needs to implement some way of using the content in this repository to host the documentation for the client. Having all client documentation in one centralized repository complicates this because it means that using something simple to convert this into a static html site, like Github's gh-pages or by using Jekyll, will expose all documentation to the public. Instead, we'll need it to work so that access to documentation is limited to the clients viewing their own documentation and documentation is not publicly accessible unless we want it to be.
+
+One idea is that we can figure out a way of building this documentation into the actual client sites themselves. Perhaps we could create a module that pulls only documentation for that client into their site and access controls can then be handled within Drupal.
+
+Another idea is that we self-host this on a centralized server and control access by simple http authentication.
