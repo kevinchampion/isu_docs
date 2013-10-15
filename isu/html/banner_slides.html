@@ -1,0 +1,78 @@
+<!DOCTYPE html><html>
+<head><meta charset="UTF-8"><link href='https://dl.dropbox.com/u/57694/documentation/github.css' rel='stylesheet' type='text/css'>
+<style>
+img {
+  zoom:50%;
+}
+img.logo {
+  zoom:100%;
+}
+</style>
+</head><body><p><img class="logo" src="../assets/images/IXM-Transparent-Vertical.jpg" style="float:right; margin:-10px 15px 0 0;" height="90" />
+<img src="../assets/images/isu_logo.png" alt="Indiana State University logo" /></p>
+
+<h1 id="banner-slides">Banner Slides</h1>
+<ol>
+<li><a href="#structure">Structure</a></li>
+<li><a href="#changes">Changes</a></li>
+<li><a href="#how-it-works">How it works</a></li>
+<li><a href="#add-a-new-banner-slider">Add a new banner slider</a></li>
+</ol>
+<h2 id="structure">Structure</h2>
+<p>The banner slides are structured using their own content type called "Slide" (machine_name: homepage_slide). Any banner image that needs an overlay text box must be created as a slide node. To power a slideshow, there are two other components that are used: a nodequeue and a view. The nodequeue gathers a collection of nodes and orders them. The view takes the nodes from the queue and renders them as slider slides in a block. The block that the view creates can then be placed in a region and given visibility rules to control output location.</p>
+<p><img alt="Content type" src="../assets/images/_kbz.png" title="Banner slide content type" /></p>
+<p><img alt="Banner slide nodequeue" src="../assets/images/dk4p.png" title="Banner slide nodequeue" /></p>
+<p><img alt="Banner slider view" src="../assets/images/j6x8.png" title="Banner slider view" /></p>
+<h2 id="changes">Changes</h2>
+<p>The original site launch contained only one banner slider style and contained a separate caption field for writing the textual caption beneath the main text overlay section.</p>
+<p>As of 10/14/2013, the banner slides contain two overlay styles and the caption field has been removed. In addition, a link field has been added and extra tokens for the banner title field have been configured. The banner overlay now links the entire overlay box if a link is entered into the link field. The caption is now written wrapped in a [caption] token in the title field. Lastly, there's now a style field with the options of "home" and "page".</p>
+<h3 id="home-style">Home style</h3>
+<p><img alt="Home banner style" src="../assets/images/-nu9.png" title="Home banner style" /></p>
+<h3 id="page-style">Page style</h3>
+<p><img alt="Page banner style" src="../assets/images/g6q4.png" title="Page banner style" /></p>
+<h2 id="how-it-works">How it works</h2>
+<p>The slide nodes require an image and a textual message for the banner overlay.</p>
+<h3 id="title">Title</h3>
+<p>The title field of the node is for internal administrative use only.</p>
+<p><img alt="Administrative title field" src="../assets/images/1tv7.png" title="Administrative title field" /></p>
+<h3 id="image">Image</h3>
+<p>The image field is for uploading the actual banner image.</p>
+<p><img alt="Banner image field" src="../assets/images/qztv.png" title="Banner image field" /></p>
+<h3 id="link">Link</h3>
+<p>The link field is for applying a link to the entire banner overlay area. If a link is not present, the overlay will not link anywhere. This is different than the previous caption technique which only linked content within the separate caption field.</p>
+<p><img alt="Link field" src="../assets/images/k_gm.png" title="Link field" /></p>
+<h3 id="overlay-title">Overlay title</h3>
+<p>The banner overlay content comes from the "Overlay title" field. This field has a number of token replacements for building the textual overlay content. In essence, these tokens are replaced by html elements with classes that allow for targeting the elements using css selectors in order to style them. The description of the field describes the token options and gives examples of how to use them.</p>
+<p><img alt="Overlay title field" src="../assets/images/9bkz.png" title="Overlay title field" /></p>
+<p>With the new changes, the caption field content should be placed inside the [caption] token wrapper. For the "page" style overlay, the [last] token wrapper should be placed around the last word in the overlay title in order to change the text color of the last work to match the design specification.</p>
+<h3 id="overlay-position">Overlay position</h3>
+<p>The overlay position field determines whether the overlay will be aligned on the left or right side of the banner image.</p>
+<p><img alt="Overlay position field" src="../assets/images/lral.png" title="Overlay position field" /></p>
+<h3 id="overlay-vertical-align">Overlay vertical align</h3>
+<p>The overlay vertical align field determines the vertical placement of the overlay within the banner image area. This uses the "vertical-align" css property and the value of this field should be a percentage.</p>
+<p><img alt="Overlay vertical align field" src="../assets/images/0jkk.png" title="Overlay vertical align field" /></p>
+<h3 id="overlay-style">Overlay style</h3>
+<p>The overlay style determines which style overlay will be used. The "home" style features the Arvo font and has all white text and lines with a tight padding and margin. The "page" style features the Helvetica font and has light blue features and a salmon colored title text color with wider padding and margins.</p>
+<p><img alt="Overlay style field" src="../assets/images/~o1b.png" title="Overlay style field" /></p>
+<h2 id="add-a-new-banner-slider">Add a new banner slider</h2>
+<p>The process of adding a new banner slider, that is an entirely new slideshow for placement in a new section of the site, requires three steps.</p>
+<ol>
+<li>A new nodequeue must be created</li>
+<li>A new view display must be created</li>
+<li>The new block must be placed with appropriate visibility settings</li>
+</ol>
+<h3 id="nodequeue">Nodequeue</h3>
+<p>In order to control which slides will be used and what order they'll display in, a new nodequeue must be created. From /admin/structure/nodequeue select "Add simple queue":</p>
+<p><img alt="Add queue" src="../assets/images/-evf.png" title="Add queue" /></p>
+<p>Fill out the configuration form for creating the new queue and make sure to restrict the content type to only allow "Slide" nodes to be added to the queue.</p>
+<h3 id="view-display">View display</h3>
+<p>In order to render the slides in the nodequeue as a slideshow, a views block display is used. From /admin/structure/views/view/homepage_slider/edit review the view that renders the slideshows. Clone the homepage slider display and then modify the titles and options of the new display to match the subject of your new slider.</p>
+<p><img alt="Clone display" src="../assets/images/gk83.png" title="Clone display" /></p>
+<p>After cloning the display, the most important detail that must be changed is configuring the relationship to use the new nodequeue. In the "advanced" column under the "Relationship" heading, select the "Nodequeue: Queue" item.</p>
+<p><img alt="Nodequeue relationship" src="../assets/images/2x65.png" title="Nodequeue relationship" /></p>
+<p>Within the configuration settings window, change the setting to limit the results to the new Nodequeue that you created in the step above. If this isn't changed, the new views display will render the items from a different Nodequeue.</p>
+<p><img alt="Choose correct queue" src="../assets/images/y-i7.png" title="Choose correct queue" /></p>
+<p>Save the configuration and the view.</p>
+<h3 id="block-placement">Block placement</h3>
+<p>When you saved the new view display, it automatically generated a new block on the block placement configuration page located at /admin/structure/blocks. Find the newly created block, configure its visibility settings to restrict it to only display when and where you need it to, and place it in the "Banner" region.</p>
+</body>
