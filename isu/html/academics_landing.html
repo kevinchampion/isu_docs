@@ -24,7 +24,7 @@ img.logo {
 <h2 id="structure">Structure</h2>
 <p>*** Lest you be confused, during development this landing page was called the "Departments" landing page. As a result, the machine names for a lot of the components are called "departments" rather than what you're probably expecting, "academics".</p>
 <p>The academics landing page features a dynamic colleges and departments hierarchy whereby colleges are selected and the departments within that college dynamically populate. Equally so, when a department is selected the department dynamically populates.</p>
-<p><img alt="Academics landing page design mockup" src="file:///Users/kevin/Dropbox/web_projects/imagex-client-docs/isu/markdown/../assets/images/i5au.png" title="The final design mockup" /></p>
+<p><img alt="Academics landing page design mockup" src="../assets/images/i5au.png" title="The final design mockup" /></p>
 <p>This effect is achieved by hooking into the ordinary Drupal tools we're accustomed to using and adding custom functionality to them that make this dynamic interaction happen via ajax. The landing page uses a panels page to handle the layout, views to handle retrieving and formatting the html when it is dynamically retrieved, a menu generated from taxonomy terms for the colleges listing, and url aliases for handling the correct paths so that the tool is nojs compatible.</p>
 <ul>
 <li><a href="http://cms.indstate.edu/admin/structure/pages/edit/page-layout_2">Panels page</a></li>
@@ -44,13 +44,13 @@ img.logo {
 <li>Departments detail</li>
 </ol>
 <p>When a college taxonomy term is added to the college list menu, it will automatically show up as a new tab on the tab bar. When a college is selected it retrieves a list of department nodes that have been linked to that college taxonomy term. It simultaneously retrieves an individual department detail node and displays it as well.</p>
-<p><img alt="Academics landing page dynamic components" src="file:///Users/kevin/Dropbox/web_projects/imagex-client-docs/isu/markdown/../assets/images/eck~.png" title="Academics dynamic components" /></p>
+<p><img alt="Academics landing page dynamic components" src="../assets/images/eck~.png" title="Academics dynamic components" /></p>
 <p>If the page loads without a college specified, it randomly selects a college and highlights it. If the page loads without a department specified, it randomly selects a department within the college that's been selected.</p>
 <h3 id="dynamic-content">Dynamic content</h3>
 <p>The dynamic content is retrieved via ajax when a college or department is selected so long as the browser has javascript enabled. The way this works is there is custom javascript added to the page to place an http request to a specific endpoint that was setup to handle this ajax content. The endpoint retrieves the request, renders the departments list and departments details views and returns them via ajax to the browser. The javascript then parses the content and places it in the appropriate location.</p>
 <p>While the dynamic content is being retrieved and replaced, there is a spinner icon that appears to indicate to the user that new content is being retrieved. When the content returns and renders, there is a brief highlight effect that occurs to indicate to the user that the operation is complete.</p>
-<p><img alt="Spinner icon while content loads" src="file:///Users/kevin/Dropbox/web_projects/imagex-client-docs/isu/markdown/../assets/images/~2iz.png" title="Spinner icon" /></p>
-<p><img alt="Highlight effect when content's loaded" src="file:///Users/kevin/Dropbox/web_projects/imagex-client-docs/isu/markdown/../assets/images/5q8a.png" title="Highlight effect" /></p>
+<p><img alt="Spinner icon while content loads" src="../assets/images/~2iz.png" title="Spinner icon" /></p>
+<p><img alt="Highlight effect when content's loaded" src="../assets/images/5q8a.png" title="Highlight effect" /></p>
 <h2 id="how-to-add-content">How to add content</h2>
 <p>Since this landing page is more dynamic, less time needs to go into configuration and more time needs to go into content creation and curation. There are two pieces of content that need to be created for this feature</p>
 <ol>
@@ -67,9 +67,9 @@ img.logo {
 <p>To add a new department to a college so it shows up in the department listing and department detail, you need to add a new department node:</p>
 <p><a href="http://cms.indstate.edu/node/add/department">Add new department</a></p>
 <p>In the department node form, you must assign the correct college within which the dpeartment falls in order for it to show up in the appropriate listing.</p>
-<p><img alt="College term field in department node form" src="file:///Users/kevin/Dropbox/web_projects/imagex-client-docs/isu/markdown/../assets/images/myjg.png" title="College term field" /></p>
+<p><img alt="College term field in department node form" src="../assets/images/myjg.png" title="College term field" /></p>
 <p>You also must ensure that you add an image to the department so that the department detail appears properly.</p>
-<p><img alt="Image field in department node form" src="file:///Users/kevin/Dropbox/web_projects/imagex-client-docs/isu/markdown/../assets/images/xql_.png" title="Image field" /></p>
+<p><img alt="Image field in department node form" src="../assets/images/xql_.png" title="Image field" /></p>
 <h2 id="what-should-be-edited">What should be edited</h2>
 <p>Since this dynamic landing page was able to be developed using common Drupal components, there are a number of elements that can be configured and changed. The following can be safely modified:</p>
 <ul>
@@ -80,7 +80,7 @@ img.logo {
 <li>Bottom panel layout region</li>
 </ul>
 <h3 id="panel-page-configuration">Panel page configuration</h3>
-<p><a href="http://cms.indstate.edu/admin/structure/pages/nojs/operation/page-layout_2/handlers/page_layout_2_panel_context/content"><img alt="Panel content should change" src="file:///Users/kevin/Dropbox/web_projects/imagex-client-docs/isu/markdown/../assets/images/juet.png" title="Panel content that can change" /></a></p>
+<p><a href="http://cms.indstate.edu/admin/structure/pages/nojs/operation/page-layout_2/handlers/page_layout_2_panel_context/content"><img alt="Panel content should change" src="../assets/images/juet.png" title="Panel content that can change" /></a></p>
 <p>Each of these elements are static and will not change in context of which college or department is selected.</p>
 <h2 id="what-shouldnt-be-edited">What shouldn't be edited</h2>
 <p>Since this is a dynamic landing page with custom coded functionality, there are some elements that should not be changed. If these elements are configured differently, the dynamic functionality will break in most cases.</p>
@@ -96,16 +96,16 @@ img.logo {
 <li>Department listing view mode</li>
 </ul>
 <h3 id="panel-page-configuration_1">Panel page configuration</h3>
-<p><a href="http://cms.indstate.edu/admin/structure/pages/nojs/operation/page-layout_2/handlers/page_layout_2_panel_context/content"><img alt="Panel content that should *not* change" src="file:///Users/kevin/Dropbox/web_projects/imagex-client-docs/isu/markdown/../assets/images/juet2.png" title="Panel content that can *not* change" /></a></p>
+<p><a href="http://cms.indstate.edu/admin/structure/pages/nojs/operation/page-layout_2/handlers/page_layout_2_panel_context/content"><img alt="Panel content that should *not* change" src="../assets/images/juet2.png" title="Panel content that can *not* change" /></a></p>
 <h3 id="view-configuration">View configuration</h3>
-<p><a href="http://cms.indstate.edu/admin/structure/views/view/departments_list/edit"><img alt="Views configuration that should *not* change" src="file:///Users/kevin/Dropbox/web_projects/imagex-client-docs/isu/markdown/../assets/images/92zx.png" title="Views configuration that can *not* change" /></a></p>
+<p><a href="http://cms.indstate.edu/admin/structure/views/view/departments_list/edit"><img alt="Views configuration that should *not* change" src="../assets/images/92zx.png" title="Views configuration that can *not* change" /></a></p>
 <h3 id="view-mode-configuration">View mode configuration</h3>
-<p><a href="http://cms.indstate.edu/admin/structure/types/manage/department/display/dept_list_block"><img alt="View mode configuration that should *not* change" src="file:///Users/kevin/Dropbox/web_projects/imagex-client-docs/isu/markdown/../assets/images/0v17.png" title="View mode that can *not* change" /></a></p>
+<p><a href="http://cms.indstate.edu/admin/structure/types/manage/department/display/dept_list_block"><img alt="View mode configuration that should *not* change" src="../assets/images/0v17.png" title="View mode that can *not* change" /></a></p>
 <h2 id="paths">Paths</h2>
 <p>The academics landing page makes heavy use of url aliasing, which is the "proper Drupal way" of abstracting out and decoupling public facing aliases from system paths. This is probably one of the most important distinctions that must be understood between how this landing page works and how more basic landing pages work.</p>
 <p>While with other landing pages you would edit the actual path of the panels page to match the desired public facing path, with this landing page you do <em>not</em> do this. Instead of editing the path directly, an alias is setup.</p>
-<p><img alt="Academics landing page path" src="file:///Users/kevin/Dropbox/web_projects/imagex-client-docs/isu/markdown/../assets/images/v81b.png" title="Panels page path" /></p>
-<p><img alt="Academics landing page path" src="file:///Users/kevin/Dropbox/web_projects/imagex-client-docs/isu/markdown/../assets/images/-x~0.png" title="Panels page path" /></p>
+<p><img alt="Academics landing page path" src="../assets/images/v81b.png" title="Panels page path" /></p>
+<p><img alt="Academics landing page path" src="../assets/images/-x~0.png" title="Panels page path" /></p>
 <p>So, even though the academics landing page panel page is set to the path</p>
 <p>/landing_2</p>
 <p>it shouldn't be changed because there is an alias set for this system path as</p>
@@ -123,8 +123,8 @@ img.logo {
 <h3 id="technical-details-aliases">Technical details (aliases)</h3>
 <p>The top level alias for /landing_2 is manually created. The custom module code does not attempt to create this alias.</p>
 <p>The second level alias for /landing_2/!term is created in isu_panel_layouts.module on term insert and update. It is hardcoded to the "academics/[term name]" pattern. This is a bit of a weakness in that it cannot be configured in the admin, but in the time allotted we weren't able to come up with a clever approach to handling this simply.</p>
-<p><img alt="Alias creation function in isu_panel_layouts.module" src="file:///Users/kevin/Dropbox/web_projects/imagex-client-docs/isu/markdown/../assets/images/0f3n.png" title="Alias creation function" /></p>
+<p><img alt="Alias creation function in isu_panel_layouts.module" src="../assets/images/0f3n.png" title="Alias creation function" /></p>
 <p>The third level alias for /landing_2/!term/!child is created in isu_panel_layouts.module on node insert and update. However, unlike the second level above, the pattern itself is <em>not</em> hardcoded. Instead, it uses the url alias pattern settings page to add a section for dynamic, custom panels pages:</p>
 <p><a href="http://cms.indstate.edu/admin/config/search/path/patterns">/admin/config/search/path/patterns</a></p>
-<p><img alt="Url alias patterns for panels pages" src="file:///Users/kevin/Dropbox/web_projects/imagex-client-docs/isu/markdown/../assets/images/as5p.png" title="Url alias patterns for panels pages" /></p>
+<p><img alt="Url alias patterns for panels pages" src="../assets/images/as5p.png" title="Url alias patterns for panels pages" /></p>
 </body>
