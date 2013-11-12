@@ -1,0 +1,111 @@
+<!DOCTYPE html><html>
+<head><meta charset="UTF-8"><link href='https://dl.dropbox.com/u/57694/documentation/github.css' rel='stylesheet' type='text/css'>
+<style>
+img {
+  zoom:50%;
+}
+img.logo {
+  zoom:100%;
+}
+</style>
+</head><body><p><img class="logo" src="../assets/images/IXM-Transparent-Vertical.jpg" style="float:right; margin:-10px 15px 0 0;" height="90" />
+<img src="../assets/images/isu_logo.png" alt="Indiana State University logo" /></p>
+
+<h1 id="basic-page-menus">Basic Page Menus</h1>
+<p>The ISU main site contains many "sub-sites", which are smaller sections within the site that fit within the whole site hierarchy, but are self-contained sections of the site. For instance, "Office of the President" is a sub-site that's located within the "About" section of the site. These sub-sites need their own controlled navigational menu that appears on basic pages. This documentation describes how to set these menus up.</p>
+<ul>
+<li><a href="#menu_placement">Menu placement</a></li>
+<li><a href="#url_patterns">URL patterns</a></li>
+<li><a href="#menu_block_creation">Menu block creation</a></li>
+<li><a href="#menu_block_placement">Menu block placement</a></li>
+</ul>
+<h2 id="menu-placement">Menu placement</h2>
+<p>The first step in the process is to create a piece of content using the basic page content type. In the meta-data fields at the bottom of the creation form, the most important section for content writers and editor will be to configure a menu item for the page.</p>
+<p><img alt="Menu assignment" src="../assets/images/btis.png" title="Menu assignment" /></p>
+<ol>
+<li>Select the "Menu settings" tab.</li>
+<li>Check the box to "Provide a menu link"</li>
+<li>Fill out the "Menu link title" and "Description" fields</li>
+<li>Select the "Parent item" the current page should fall under</li>
+</ol>
+<p><img alt="Menu parent item selection" src="../assets/images/g373.png" title="Menu parent item selection" /></p>
+<p>Once this is done, when the page is published, a new menu item will appear in the location you set it there.</p>
+<blockquote>
+<p>This step can be done by content writers and editors.</p>
+</blockquote>
+<h2 id="url-patterns">URL patterns</h2>
+<p>The second step in the process is to ensure that the page's url path fits properly in the path structure hierarchy of the sub-site you're creating. The path structure should be such that you have a parent page that represents the sub-site homepage and any sub-site inner pages will be placed under that path.</p>
+<h4 id="for-example">For example</h4>
+<ul>
+<li>sub-site home: <code>/about/accreditation</code></li>
+<li>sub-site inner: <code>/about/accreditation/accreditation-programs</code></li>
+</ul>
+<p>The url alias path can be manually overwritten in the page metadata tab entitled "URL path settings". However, in most cases this is unnecessary.</p>
+<p><img alt="URL alias definition" src="../assets/images/2703.png" title="URL alias definition" /></p>
+<p>Drupal has path alias patterns that are configured as the defaults. For the basic page content type, the default pattern is to use the menu link structure to determine the path. When using the example above, if you are creating the "Accreditation Programs" inner page to the "Accreditation" sub-site, you only need to ensure that the menu item properly selects the "Accreditation" page as its parent menu item. The resultant path will be automatically created as:</p>
+<p><code>/about/accreditation/accreditation-programs</code></p>
+<blockquote>
+<p>This step can be done by content writers and editors.</p>
+</blockquote>
+<h2 id="menu-block-creation">Menu block creation</h2>
+<p>After creating the basic page nodes to fill out the content pages of the sub-site (or at any point after the parent homepage of the sub-site is created), you'll create a menu block specific to this sub-site. This menu block will be configured to filter the main menu to only display the menu items inside the sub-site.</p>
+<p>To do this, navigate to the add menu block form:</p>
+<p><code>/admin/structure/block/add-menu-block</code></p>
+<p>In this form, set it up to display your sub-site menu inside the main menu. You do this by:</p>
+<ol>
+<li>Leave the "Block title" blank</li>
+<li>Select "Advanced options"</li>
+<li>Select "Block title as link"</li>
+<li>Leave the "Menu" set to "Main menu"</li>
+<li>Leave the "Starting level" at "1st level (primary)"</li>
+<li>Leave the "Maximum depth" "Unlimited"</li>
+<li>Select "Expand all children of this tree"</li>
+</ol>
+<p><img alt="Menu block configuration" src="../assets/images/v5jl.png" title="Menu block configuration" /></p>
+<ol>
+<li>Set the "Fixed parent item" to the homepage menu item of your sub-site</li>
+</ol>
+<p><img alt="Fixed parent item" src="../assets/images/b9fj.png" title="Fixed parent item" /></p>
+<p>This configuration creates the menu block for your sub-site and makes it available to you for placement.</p>
+<blockquote>
+<p>This step needs to be done by content administrators or managers with sufficient Drupal training.</p>
+</blockquote>
+<h2 id="menu-block-placement">Menu block placement</h2>
+<p>Once the menu block for the sub-site is created, all you have to do is place it where it needs to display. In most cases, this means adding it to the default Panels template for Basic Page nodes. This can be found at:</p>
+<p><code>/admin/structure/pages/nojs/operation/node_view/handlers/node_view_panel_context_3/content</code></p>
+<p>Add the menu block to the "Right" sidebar region.</p>
+<ol>
+<li>Select the gear icon to add new content</li>
+</ol>
+<p><img alt="Add content to region" src="../assets/images/2-a5.png" title="Add content to region" /></p>
+<ol>
+<li>Select the "Miscellaneous category" and then select your newly created menu block</li>
+</ol>
+<p><img alt="Add menu block" src="../assets/images/vuhl.png" title="Add menu block" /></p>
+<ol>
+<li>Select "Finish" to confirm the menu block configuration settings</li>
+</ol>
+<p><img alt="Confirm settings" src="../assets/images/wvqf.png" title="Confirm settings" /></p>
+<p>Configure the menu block visibility settings</p>
+<ol>
+<li>
+<p>Select the gear icon of the block itself</p>
+</li>
+<li>
+<p>Under "Visibility rules" select "Add a new rule"</p>
+</li>
+</ol>
+<p><img alt="Visibility rules" src="../assets/images/tm3f.png" title="Visibility rules" /></p>
+<ol>
+<li>Select the "String: URL path" option</li>
+</ol>
+<p><img alt="String URL path option" src="../assets/images/btbt.png" title="String URL path option" /></p>
+<ol>
+<li>Enter the url path to the sub-site homepage and any sub-site inner pages</li>
+</ol>
+<p><img alt="Enter url paths" src="../assets/images/uzop.png" title="Enter url paths" /></p>
+<p>Save the panels configuration and view your accreditation node to find the menu placed appropriately.</p>
+<p><img alt="Completed sub-site menu" src="../assets/images/2977.png" title="Completed sub-site menu" /></p>
+<blockquote>
+<p>This step needs to be done by content administrators or managers with sufficient Drupal training.</p>
+</body>

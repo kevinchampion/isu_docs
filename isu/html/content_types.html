@@ -1,0 +1,108 @@
+<!DOCTYPE html><html>
+<head><meta charset="UTF-8"><link href='https://dl.dropbox.com/u/57694/documentation/github.css' rel='stylesheet' type='text/css'>
+<style>
+img {
+  zoom:50%;
+}
+img.logo {
+  zoom:100%;
+}
+</style>
+</head><body><p><img class="logo" src="../assets/images/IXM-Transparent-Vertical.jpg" style="float:right; margin:-10px 15px 0 0;" height="90" />
+<img src="../assets/images/isu_logo.png" alt="Indiana State University logo" /></p>
+
+<h1 id="content-types">Content types</h1>
+<p>The ISU main site contains a number of content types for different purposes.</p>
+<ul>
+<li><a href="#article">Article</a></li>
+<li><a href="#basic_page">Basic page</a></li>
+<li><a href="#department">Department</a></li>
+<li><a href="#event">Event</a></li>
+<li><a href="#external_link">External Link</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#news">News</a></li>
+<li><a href="#profile">Profile</a></li>
+<li><a href="#program">Program</a></li>
+<li><a href="#promotion">Promotion</a></li>
+<li><a href="#slide">Slide</a></li>
+<li><a href="#topic_hub">Topic hub</a></li>
+<li><a href="#user_alert">User Alert</a></li>
+<li><a href="#webform">Webform</a></li>
+</ul>
+<h2 id="article">Article</h2>
+<p>The Article content type is comes pre-installed with Drupal. For ISU it is deprecated and not used for any purpose. It will be removed.</p>
+<h2 id="basic-page">Basic page</h2>
+<p>The Basic page content type is the most generic type of content in the site. Its purpose is to be a catch-all for unstructured content that does not have a better location. Since most of the content ISU has is unstructured, this content type will be used heavily.</p>
+<ul>
+<li>Use basic page for your static content, such as an 'About us' page.</li>
+<li>Don't use basic page for content that has a specific, repeatable, structure and is modeled in another data structure in the site.</li>
+</ul>
+<h2 id="department">Department</h2>
+<p>The Department content type is for housing summary information about departments at the university. The entries created with this content type are used to populate the Academics portion of the main site. The content is brochure-like in nature in that it is meant to highlight the department and attract users to click through to the actual department websites (which will be housed on the new college sites).</p>
+<ul>
+<li>Use department for listing and highlighting individual departments in the university.</li>
+<li>Don't use department to detail all information about a department and its offerings, or to try to house an actual department website.</li>
+</ul>
+<h2 id="event">Event</h2>
+<p>The Event content type is for listing events. Its purpose is to capture upcoming events and categorize them in order to display them in various listings and visualizations on the site. This includes calendar displays and things like iCal feeds.</p>
+<ul>
+<li>Use event for listing events.</li>
+<li>Don't use event for listing news or other timely content that is not strictly an event.</li>
+</ul>
+<h2 id="external-link">External link</h2>
+<p>The External link content type is used for manually adding links that should be indexed and listed in the A-Z listing page. The A-Z listing is automatically indexing and displaying most of the relevant internal site content, but does not automatically index external site content. Adding items to this content type allows the A-Z search and listing to display manually entered links.</p>
+<ul>
+<li>Use external link for populating the search and A-Z listing page with links to internal and external content that does not already appear in the A-Z, but you would like it to appear.</li>
+<li>Don't use external link for adding links to content that is already automatically populating the A-Z listing page.</li>
+</ul>
+<h2 id="gallery">Gallery</h2>
+<p>The gallery content type was intended to be a collection of image file entities that can be tagged, titled, have a cover image upload field, and provide a short description. While the intent of this content type was to provide collections of images organized into galleries, during development it was re-prioritized and lost it's original purpose. This can either be recovered and repurposed to fit an ISU need, or it can be marked deprecated and removed.</p>
+<p>*** This content type has not been used or tested since initial development, so it may require some additional tweaking to be useful.</p>
+<h2 id="news">News</h2>
+<p>The News content type is for listing news. Its purpose is to capture recent news articles and categorize them in order to display them in various listings on the site and to syndicate them via RSS.</p>
+<ul>
+<li>Use news for listing news articles.</li>
+<li>Don't use news for listing events or for creating basic static pages in the site.</li>
+</ul>
+<h2 id="profile">Profile</h2>
+<p>The Profile content type is for highlighting individuals at the university and providing a landing page for the profile. The original design specification showed these profiles being displayed in an interactive slider interface. This was originally part of the blog content type and associated pages that were pushed to a later phase of development.</p>
+<p><img alt="Profile detail" src="../assets/images/c1_BlogProfile_v1.jpg" title="Profile detail" /></p>
+<p>*** This content type has not been used or tested since initial development, so it may require some additional tweaking to be useful.</p>
+<h2 id="program">Program</h2>
+<p>The Program content type is for listing programs offered by the university, like majors, minors, licentures, PhDs, etc. This content is then used to highlight programs in the Academics section of the main site. The content created here is brochure in nature, it is meant to attract users to click through to the actual program home pages, which will be housed on the college sites that offer the program.</p>
+<ul>
+<li>Do use program for listing and highlighting information about programs.</li>
+<li>Don't use program to detail all information about a program and its offerings, or to try to house an actual program website.</li>
+</ul>
+<h2 id="promotion">Promotion</h2>
+<p>The Promotion content type is for highlighting particular content on landing pages. For instance, the original design specification has a promotion bar on the homepage that was meant to list three promotions. These promotions are somewhat generic content that can be used for landing page purposes.</p>
+<p><img alt="Promotion bar" src="../assets/images/promotion_bar.png" title="Promotion bar" /></p>
+<ul>
+<li>Do use promotion for calling out small blocks of content to be emphasized on landing pages.</li>
+<li>Don't use promotion for structuring other types of content.</li>
+</ul>
+<p>*** This content type has not been used or tested since initial development, so it may require some additional tweaking to be useful.</p>
+<h2 id="slide">Slide</h2>
+<p>The Slide content type is for creating banner images with overlay messages for the header banner. These slides are then placed in nodequeues which are rendered as blocks and placed in the banner region of the site header.</p>
+<ul>
+<li>Use slide for creating banner images and overlays.</li>
+<li>Don't use slide for anything else.</li>
+</ul>
+<h2 id="topic-hub">Topic hub</h2>
+<p>The Topic hub content type is for creating dashboard content pages that pull in content from across the site based on a particular tag or set of tags. This content type utilizes tag meta-data to render landing pages that highlight news, events, social media, and potentially other content.</p>
+<p><img alt="Topic hub" src="../assets/images/topic_hub.png" title="Topic hub" /></p>
+<p>*** This content type has not been used or tested since initial development, so it may require some additional tweaking to be useful.</p>
+<h2 id="user-alert">User alert</h2>
+<p>A User alert is a short message displayed at the top of the site, alerting users to critical information like an emergency or breaking news. After viewing it, they can click and close the message. User alerts can happen as a top-of-the-site interruption message or as a modal overlay, which can be selected in the admin creation form.</p>
+<p><img alt="User alert" src="../assets/images/Emergency-Top.v1.r4.jpg" title="User alert" /></p>
+<ul>
+<li>Use user alert for alerting users to emergencies.</li>
+<li>Don't use user alert for trivial alerts that don't require full-site interruption.</li>
+</ul>
+<h2 id="webform">Webform</h2>
+<p>A webform is a form or questionnaire accessible to users. Submission results and statistics are recorded and accessible to privileged users.</p>
+<ul>
+<li>Use webform for creating forms to solicit information from users.</li>
+<li>Don't use webform for creating non-form content.</li>
+</ul>
+</body>
