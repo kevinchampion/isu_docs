@@ -10,16 +10,24 @@
 
 ## Intro
 
-Banners are called "Media Assets" and can be created while you are updating or creating a page. Banners are re-usable which means you can use the same banner on multiple pages without having to re-create the banner. When you add more than one banner to a page, it creates a slide-show display.
+Banners are a type of "Media Asset" that can be created while you are adding or updating a page or other content of the site. Banners are re-usable which means you can use the same banner on multiple pages without having to re-create the banner. When you add more than one banner to a page, it creates a slide-show display.
 
 ## Creating
 
-![Content type](../assets/images/_kbz.png "Banner slide content type")
+You'll more than likely create a new banner while creating a page. Here are the steps to create one.
 
-![Banner slide nodequeue](../assets/images/dk4p.png "Banner slide nodequeue")
+1. 
+![Add Banner Step 1](../assets/images/AddBanner1.png "Adding Banner Step 1")
 
-![Banner slider view](../assets/images/j6x8.png "Banner slider view")
+![Add Banner Step 2](../assets/images/AddBanner2.png "Adding Banner Step 2")
 
+![Add Banner Step 3](../assets/images/AddBanner3.png "Adding Banner Step 3")
+
+![Add Banner Step 4](../assets/images/AddBanner4.png "Adding Banner Step 4")
+
+![Add Banner Step 5](../assets/images/AddBanner5.png "Adding Banner Step 5")
+
+![Add Banner Step 6](../assets/images/AddBanner6.png "Adding Banner Step 6")
 
 ### Title
 
