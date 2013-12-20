@@ -1,4 +1,4 @@
-<img class="logo" src="../assets/images/IXM-Transparent-Vertical.jpg" style="float:right; margin:-10px 15px 0 0;" height="90" />
+<img class="logo" src="../../global_assets/images/IXM-Transparent-Vertical.jpg" style="float:right; margin:-10px 15px 0 0;" height="90" />
 <img class="logo" src="../assets/images/isu_logo.png" alt="Indiana State University logo" />
 
 # Banner Slides
