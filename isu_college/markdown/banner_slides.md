@@ -16,13 +16,43 @@ Banners are a type of "Media Asset" that can be created while you are adding or 
 
 You'll more than likely create a new banner while creating a page. Here are the steps to create one.
 
+### Step 1
+
+Create a page by navigating through the administration menu and select:
+
+	Content > Add content > Page.
+
+There are two buttons at the top of the 'Create Page' form: 
+
+**'Add new Media Asset'** and **'Add existing Media Asset'**
+
+Since we want to create a new Media Asset (Banner), click:
+
+**'Add new Media Asset'**
+
 ![Add Banner Step 1](../assets/images/AddBanner1.png "Adding Banner Step 1")
+
+### Step 2
+
+The 'Add New Media Asset' dialog will appear. The first thing you'll want to do is **Select** an **Image**
 
 ![Add Banner Step 2](../assets/images/AddBanner2.png "Adding Banner Step 2")
 
+### Step 3
+
+Click **Browse** to locate an image on your computer.
+
+Once you've selected an image on your computer, click **Upload** to upload your image from your computer.
+ 
 ![Add Banner Step 3](../assets/images/AddBanner3.png "Adding Banner Step 3")
 
+### Step 4
+
+Click **Next** to save the image to this banner.
+
 ![Add Banner Step 4](../assets/images/AddBanner4.png "Adding Banner Step 4")
+
+### Step 5 
 
 ![Add Banner Step 5](../assets/images/AddBanner5.png "Adding Banner Step 5")
 
