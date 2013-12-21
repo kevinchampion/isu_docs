@@ -16,7 +16,6 @@ Banners are a type of "Media Asset" that can be created while you are adding or 
 
 You'll more than likely create a new banner while creating a page. Here are the steps to create one.
 
-1. 
 ![Add Banner Step 1](../assets/images/AddBanner1.png "Adding Banner Step 1")
 
 ![Add Banner Step 2](../assets/images/AddBanner2.png "Adding Banner Step 2")
@@ -28,6 +27,30 @@ You'll more than likely create a new banner while creating a page. Here are the 
 ![Add Banner Step 5](../assets/images/AddBanner5.png "Adding Banner Step 5")
 
 ![Add Banner Step 6](../assets/images/AddBanner6.png "Adding Banner Step 6")
+
+![Add Banner Step 7](../assets/images/AddBanner7.png "Adding Banner Step 7")
+
+![Add Banner Step 8](../assets/images/AddBanner8.png "Adding Banner Step 8")
+
+![Add Banner Step 9](../assets/images/AddBanner9.png "Adding Banner Step 9")
+
+![Add Banner Step 10](../assets/images/AddBanner10.png "Adding Banner Step 10")
+
+![Add Banner Step 11](../assets/images/AddBanner11.png "Adding Banner Step 11")
+
+![Add Banner Step 12](../assets/images/AddBanner12.png "Adding Banner Step 12")
+
+![Add Banner Step 13](../assets/images/AddBanner13.png "Adding Banner Step 13")
+
+![Add Banner Step 14](../assets/images/AddBanner14.png "Adding Banner Step 14")
+
+![Add Banner Step 15](../assets/images/AddBanner15.png "Adding Banner Step 15")
+
+![Add Banner Step 16](../assets/images/AddBanner16.png "Adding Banner Step 16")
+
+![Add Banner Step 17](../assets/images/AddBanner17.png "Adding Banner Step 17")
+
+![Add Banner Step 18](../assets/images/AddBanner18.png "Adding Banner Step 18")
 
 ### Title
 
