@@ -4,8 +4,8 @@
 # Banner Slides
 
 1. [Intro](#intro)
-2. [Creating Banners](#creating-banners)
-3. [Banner Styles](#banner-styles)
+2. [Banner Styles](#banner-styles)
+3. [Creating Banners](#creating-banners)
 4. [Updating Banners](#updating-banners)
 
 ## Intro
@@ -17,6 +17,16 @@ Banners are a **"Media Asset"** that can be created while you are adding or upda
 **Banners are re-usable** which means you can use the **same banner on multiple pages** without having to re-create the banner. 
 
 When you **add multiple banners** to a single page, it creates a **slide-show display.**
+
+## Styles
+
+### Format Styles
+
+![Styles](../assets/images/Styles1.png "Styles")
+
+![Blue Line Style](../assets/images/BlueLine.png "Blue Line Style")
+
+### Banner Styles
 
 ## Creating Banners
 
@@ -154,66 +164,6 @@ Start typing to see the new style.
 Once you are satisfied with your banner overlay text, then click the **Create Media Asset** button.
 
 ![Add Banner Step 18](../assets/images/AddBanner18.png "Adding Banner Step 18")
-
-### Title
-
-The title field of the node is for internal administrative use only.
-
-![Administrative title field](../assets/images/1tv7.png "Administrative title field")
-
-### Image
-
-The image field is for uploading the actual banner image.
-
-![Banner image field](../assets/images/qztv.png "Banner image field")
-
-### Link
-
-The link field is for applying a link to the entire banner overlay area. If a link is not present, the overlay will not link anywhere. This is different than the previous caption technique which only linked content within the separate caption field.
-
-![Link field](../assets/images/k_gm.png "Link field")
-
-### Overlay title
-
-The banner overlay content comes from the "Overlay title" field. This field has a number of token replacements for building the textual overlay content. In essence, these tokens are replaced by html elements with classes that allow for targeting the elements using css selectors in order to style them. The description of the field describes the token options and gives examples of how to use them.
-
-![Overlay title field](../assets/images/9bkz.png "Overlay title field")
-
-With the new changes, the caption field content should be placed inside the [caption] token wrapper. For the "page" style overlay, the [last] token wrapper should be placed around the last word in the overlay title in order to change the text color of the last work to match the design specification.
-
-### Overlay position
-
-The overlay position field determines whether the overlay will be aligned on the left or right side of the banner image.
-
-![Overlay position field](../assets/images/lral.png "Overlay position field")
-
-### Overlay vertical align
-
-The overlay vertical align field determines the vertical placement of the overlay within the banner image area. This uses the "vertical-align" css property and the value of this field should be a percentage.
-
-![Overlay vertical align field](../assets/images/0jkk.png "Overlay vertical align field")
-
-### Overlay style
-
-The overlay style determines which style overlay will be used. The "home" style features the Arvo font and has all white text and lines with a tight padding and margin. The "page" style features the Helvetica font and has light blue features and a salmon colored title text color with wider padding and margins.
-
-![Overlay style field](../assets/images/~o1b.png "Overlay style field")
-
-The original site launch contained only one banner slider style and contained a separate caption field for writing the textual caption beneath the main text overlay section.
-
-## Styles
-
-![Styles](../assets/images/Styles1.png "Styles")
-
-![Blue Line Style](../assets/images/BlueLine.png "Blue Line Style")
-
-### Home style
-
-![Home banner style](../assets/images/-nu9.png "Home banner style")
-
-### Page style
-
-![Page banner style](../assets/images/g6q4.png "Page banner style")
 
 ## Updating
 
