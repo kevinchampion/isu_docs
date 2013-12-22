@@ -56,8 +56,8 @@ Click **Next** to continue.
 
 Enter **Alt Text** and **Title Text** 
 
-#### Alt Text: Displays when the image isn't loaded
-#### Title Text: Displays when the image is hovered
+**Alt Text:** Displays when the image isn't loaded
+**Title Text:** Displays when the image is hovered
 
 Click **Save** to finish saving the image to this banner.
 
@@ -67,7 +67,7 @@ Click **Save** to finish saving the image to this banner.
 
 After you've saved an image, it should appear above the **Title** field.
 
-Next, enter a **Title** for this banner. The title field is only used for administrative purposes. *The title field is **not** shown on the banner* 
+Next, enter a **Title** for this banner. The title field is only used for administrative purposes. **The title field is not shown on the banner.**
 
 ![Add Banner Step 6](../assets/images/AddBanner6.png "Adding Banner Step 6")
 
@@ -95,7 +95,7 @@ There are two Slideshow **Styles**
 
 **Left Slideshow Block** and **Right Slideshow Block**
 
-Text will be displayed on the **left** or **right** respectively.
+Text on the banner will be aligned to the **left** or **right** respectively.
 
 ![Add Banner Step 10](../assets/images/AddBanner10.png "Adding Banner Step 10")
 
@@ -113,17 +113,39 @@ Change the text style to **Heading 2**
 
 ### Step 12
 
-Select a text style.
+Select a **Formatting Style** style to change the text looks.
 
 ![Add Banner Step 13](../assets/images/AddBanner13.png "Adding Banner Step 13")
 
+In this example, we selected 'Large Line'
+
 ![Add Banner Step 14](../assets/images/AddBanner14.png "Adding Banner Step 14")
+
+### Step 13
+
+Start typing to see what the text looks like
 
 ![Add Banner Step 15](../assets/images/AddBanner15.png "Adding Banner Step 15")
 
+### Step 14
+
+Once you are happy with the top line, press **Return/Enter** to start a new line. 
+
+Click the **Formatting Styles** drop down to change the text style again.
+
+In this case, we selected the 'Line Title' style.
+
 ![Add Banner Step 16](../assets/images/AddBanner16.png "Adding Banner Step 16")
 
+### Step 15
+
+Start typing to see the new style. 
+
 ![Add Banner Step 17](../assets/images/AddBanner17.png "Adding Banner Step 17")
+
+### Step 17
+
+Once you are satisfied with your banner overlay text, then click the **Create Media Asset** button.
 
 ![Add Banner Step 18](../assets/images/AddBanner18.png "Adding Banner Step 18")
 
