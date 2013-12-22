@@ -42,33 +42,78 @@ The 'Add New Media Asset' dialog will appear. The first thing you'll want to do 
 
 Click **Browse** to locate an image on your computer.
 
-Once you've selected an image on your computer, click **Upload** to upload your image from your computer.
+Once you've selected an image on your computer, click **Upload** to upload the image.
  
 ![Add Banner Step 3](../assets/images/AddBanner3.png "Adding Banner Step 3")
 
 ### Step 4
 
-Click **Next** to save the image to this banner.
+Click **Next** to continue.
 
 ![Add Banner Step 4](../assets/images/AddBanner4.png "Adding Banner Step 4")
 
 ### Step 5 
 
+Enter **Alt Text** and **Title Text** 
+
+#### Alt Text: Displays when the image isn't loaded
+#### Title Text: Displays when the image is hovered
+
+Click **Save** to finish saving the image to this banner.
+
 ![Add Banner Step 5](../assets/images/AddBanner5.png "Adding Banner Step 5")
+
+### Step 6
+
+After you've saved an image, it should appear above the **Title** field.
+
+Next, enter a **Title** for this banner. The title field is only used for administrative purposes. *The title field is **not** shown on the banner* 
 
 ![Add Banner Step 6](../assets/images/AddBanner6.png "Adding Banner Step 6")
 
 ![Add Banner Step 7](../assets/images/AddBanner7.png "Adding Banner Step 7")
 
+### Step 7 
+
+The **Body** holds the *text overlay* of the banner.
+
+Click the **DIV </>** button 
+
 ![Add Banner Step 8](../assets/images/AddBanner8.png "Adding Banner Step 8")
+
+### Step 8
+
+After clicking the **DIV </>** button, a popup will appear. 
+
+On the left, select the **Style** of slideshow you want.
 
 ![Add Banner Step 9](../assets/images/AddBanner9.png "Adding Banner Step 9")
 
+### Step 9
+
+There are two Slideshow **Styles** 
+
+**Left Slideshow Block** and **Right Slideshow Block**
+
+Text will be displayed on the **left** or **right** respectively.
+
 ![Add Banner Step 10](../assets/images/AddBanner10.png "Adding Banner Step 10")
+
+### Step 10
+
+After selecting the Slideshow Style, your screen should look like this.
 
 ![Add Banner Step 11](../assets/images/AddBanner11.png "Adding Banner Step 11")
 
+### Step 11
+
+Change the text style to **Heading 2**
+
 ![Add Banner Step 12](../assets/images/AddBanner12.png "Adding Banner Step 12")
+
+### Step 12
+
+Select a text style.
 
 ![Add Banner Step 13](../assets/images/AddBanner13.png "Adding Banner Step 13")
 
