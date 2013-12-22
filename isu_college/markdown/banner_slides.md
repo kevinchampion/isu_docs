@@ -4,7 +4,7 @@
 # Banner Slides
 
 1. [Intro](#intro)
-2. [Banner Styles](#banner-styles)
+2. [Styles](#styles)
 3. [Creating Banners](#creating-banners)
 4. [Updating Banners](#updating-banners)
 
@@ -165,6 +165,6 @@ Once you are satisfied with your banner overlay text, then click the **Create Me
 
 ![Add Banner Step 18](../assets/images/AddBanner18.png "Adding Banner Step 18")
 
-## Updating
+## Updating Banners
 
 
