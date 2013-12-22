@@ -4,21 +4,27 @@
 # Banner Slides
 
 1. [Intro](#intro)
-2. [Creating](#creating)
-3. [Styles](#styles)
-4. [Updating](#updating)
+2. [Creating Banners](#creating-banners)
+3. [Banner Styles](#banner-styles)
+4. [Updating Banners](#updating-banners)
 
 ## Intro
 
-Banners are a type of "Media Asset" that can be created while you are adding or updating a page or other content of the site. Banners are re-usable which means you can use the same banner on multiple pages without having to re-create the banner. When you add more than one banner to a page, it creates a slide-show display.
+Banners **appear at the top of pages** that enable this feature.
 
-## Creating
+Banners are a **"Media Asset"** that can be created while you are adding or updating a page or other content of the site. 
+
+**Banners are re-usable** which means you can use the **same banner on multiple pages** without having to re-create the banner. 
+
+When you **add multiple banners** to a single page, it creates a **slide-show display.**
+
+## Creating Banners
 
 You'll more than likely create a new banner while creating a page. Here are the steps to create one.
 
 ### Step 1
 
-Create a page by navigating through the administration menu and select:
+Create a page by navigating to the following in the administration menu:
 
 	Content > Add content > Page.
 
@@ -113,7 +119,7 @@ Change the text style to **Heading 2**
 
 ### Step 12
 
-Select a **Formatting Style** style to change the text looks.
+Select a **Formatting Style** to change the text looks.
 
 ![Add Banner Step 13](../assets/images/AddBanner13.png "Adding Banner Step 13")
 
@@ -123,7 +129,7 @@ In this example, we selected 'Large Line'
 
 ### Step 13
 
-Start typing to see what the text looks like
+Start typing to see what the text looks like.
 
 ![Add Banner Step 15](../assets/images/AddBanner15.png "Adding Banner Step 15")
 
@@ -197,6 +203,10 @@ The original site launch contained only one banner slider style and contained a 
 
 ## Styles
 
+![Styles](../assets/images/Styles1.png "Styles")
+
+![Blue Line Style](../assets/images/BlueLine.png "Blue Line Style")
+
 ### Home style
 
 ![Home banner style](../assets/images/-nu9.png "Home banner style")
@@ -207,45 +217,4 @@ The original site launch contained only one banner slider style and contained a 
 
 ## Updating
 
-## How it works
-
-The slide nodes require an image and a textual message for the banner overlay.
-
-
-
-## Add a new banner slider
-
-The process of adding a new banner slider, that is an entirely new slideshow for placement in a new section of the site, requires three steps.
-
-1. A new nodequeue must be created
-2. A new view display must be created
-3. The new block must be placed with appropriate visibility settings
-
-### Nodequeue
-
-In order to control which slides will be used and what order they'll display in, a new nodequeue must be created. From /admin/structure/nodequeue select "Add simple queue":
-
-![Add queue](../assets/images/-evf.png "Add queue")
-
-Fill out the configuration form for creating the new queue and make sure to restrict the content type to only allow "Slide" nodes to be added to the queue.
-
-### View display
-
-In order to render the slides in the nodequeue as a slideshow, a views block display is used. From /admin/structure/views/view/homepage_slider/edit review the view that renders the slideshows. Clone the homepage slider display and then modify the titles and options of the new display to match the subject of your new slider.
-
-![Clone display](../assets/images/gk83.png "Clone display")
-
-After cloning the display, the most important detail that must be changed is configuring the relationship to use the new nodequeue. In the "advanced" column under the "Relationship" heading, select the "Nodequeue: Queue" item.
-
-![Nodequeue relationship](../assets/images/2x65.png "Nodequeue relationship")
-
-Within the configuration settings window, change the setting to limit the results to the new Nodequeue that you created in the step above. If this isn't changed, the new views display will render the items from a different Nodequeue.
-
-![Choose correct queue](../assets/images/y-i7.png "Choose correct queue")
-
-Save the configuration and the view.
-
-### Block placement
-
-When you saved the new view display, it automatically generated a new block on the block placement configuration page located at /admin/structure/blocks. Find the newly created block, configure its visibility settings to restrict it to only display when and where you need it to, and place it in the "Banner" region.
 
