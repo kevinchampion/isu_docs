@@ -28,6 +28,10 @@ When you **add multiple banners** to a single page, it creates a **slide-show di
 
 ### Banner Styles
 
+![Left Slideshow Block](../assets/images/LeftSlideshowBlock.png "Left Slideshow Block")
+
+![Right Slideshow Block](../assets/images/RightSlideshowBlock.png "Right Slideshow Block")
+
 ## Creating Banners
 
 You'll more than likely create a new banner while creating a page. Here are the steps to create one.
@@ -36,7 +40,7 @@ You'll more than likely create a new banner while creating a page. Here are the 
 
 Create a page by navigating to the following in the administration menu:
 
-	Content > Add content > Page.
+	Content > Add content > Page
 
 There are two buttons at the top of the 'Create Page' form: 
 
