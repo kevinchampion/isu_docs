@@ -6,7 +6,8 @@
 1. [Intro](#intro)
 2. [Styles](#styles)
 3. [Creating Banners](#creating-banners)
-4. [Updating Banners](#updating-banners)
+4. [Reusing Banners](#reusing-banners)
+5. [Updating Banners](#updating-banners)
 
 ## Intro
 
@@ -169,6 +170,66 @@ Once you are satisfied with your banner overlay text, then click the **Create Me
 
 ![Add Banner Step 18](../assets/images/AddBanner18.png "Adding Banner Step 18")
 
+## Reusing Banners
+
+If you would like to re-use an existing banner here are the steps to do so.
+
+### Step 1
+
+When you are creating or updating a page, click the **Add existing Media Asset** button.
+
+![Add Existing Banner Step 1](../assets/images/AddExistingBanner1.png "Adding Existing Banner Step 1")
+
+### Step 2
+
+Enter the name of the banner would like to add to the page. 
+
+![Add Existing Banner Step 2](../assets/images/AddExistingBanner2.png "Adding Existing Banner Step 2")
+
+### Step 3
+
+Select the banner that you would like to add to the page.
+
+![Add Existing Banner Step 3](../assets/images/AddExistingBanner3.png "Adding Existing Banner Step 3")
+
+### Step 4
+
+Click **Add Media Asset** to add to the page.
+
+![Add Existing Banner Step 4](../assets/images/AddExistingBanner4.png "Adding Existing Banner Step 4")
+
 ## Updating Banners
+
+The good thing about re-useable banners is that when you update a banner in one place, it will update the same banner throughout the site.
+
+Here are the steps to update a banner.
+
+### Step 1
+
+On the administration menu, navigate to 
+
+	Structure > Entity Types > Media Asset > Splash
+
+![Update Banner Step 1](../assets/images/UpdateBanner1.png "Update Banner Step 1")
+
+### Step 2
+
+You will then see a list of banners that currently exist on the site. 
+
+Under the **OPERATIONS** column, click **edit** for the banner you would like to update.
+
+![Update Banner Step 2](../assets/images/UpdateBanner2.png "Update Banner Step 2")
+
+### Step 3
+
+Make the changes that you want.
+
+When you're finished click the **Save** button at the bottom of the page.
+
+![Update Banner Step 3](../assets/images/UpdateBanner3.png "Update Banner Step 3")
+
+
+
+
 
 
