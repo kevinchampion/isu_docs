@@ -13,9 +13,9 @@
 
 Banners **appear at the top of pages** that enable this feature.
 
-Banners are a **"Media Asset"** that can be created while you are adding or updating a page or other content of the site. 
+Banners are a **"Media Asset"** that can be created while you are adding or updating a page or other content of the site.
 
-**Banners are re-usable** which means you can use the **same banner on multiple pages** without having to re-create the banner. 
+**Banners are re-usable** which means you can use the **same banner on multiple pages** without having to re-create the banner.
 
 When you **add multiple banners** to a single page, it creates a **slide-show display.**
 
@@ -43,7 +43,7 @@ Create a page by navigating to the following in the administration menu:
 
 	Content > Add content > Page
 
-There are two buttons at the top of the 'Create Page' form: 
+There are two buttons at the top of the 'Create Page' form:
 
 **'Add new Media Asset'** and **'Add existing Media Asset'**
 
@@ -64,7 +64,7 @@ The 'Add New Media Asset' dialog will appear. The first thing you'll want to do 
 Click **Browse** to locate an image on your computer.
 
 Once you've selected an image on your computer, click **Upload** to upload the image.
- 
+
 ![Add Banner Step 3](../assets/images/AddBanner3.png "Adding Banner Step 3")
 
 ### Step 4
@@ -73,9 +73,9 @@ Click **Next** to continue.
 
 ![Add Banner Step 4](../assets/images/AddBanner4.png "Adding Banner Step 4")
 
-### Step 5 
+### Step 5
 
-Enter **Alt Text** and **Title Text** 
+Enter **Alt Text** and **Title Text**
 
 **Alt Text:** Displays when the image isn't loaded
 **Title Text:** Displays when the image is hovered
@@ -94,17 +94,17 @@ Next, enter a **Title** for this banner. The title field is only used for admini
 
 ![Add Banner Step 7](../assets/images/AddBanner7.png "Adding Banner Step 7")
 
-### Step 7 
+### Step 7
 
 The **Body** holds the *text overlay* of the banner.
 
-Click the **DIV </>** button 
+Click the **DIV </>** button
 
 ![Add Banner Step 8](../assets/images/AddBanner8.png "Adding Banner Step 8")
 
 ### Step 8
 
-After clicking the **DIV </>** button, a popup will appear. 
+After clicking the **DIV </>** button, a popup will appear.
 
 On the left, select the **Style** of slideshow you want.
 
@@ -112,7 +112,7 @@ On the left, select the **Style** of slideshow you want.
 
 ### Step 9
 
-There are two Slideshow **Styles** 
+There are two Slideshow **Styles**
 
 **Left Slideshow Block** and **Right Slideshow Block**
 
@@ -150,7 +150,7 @@ Start typing to see what the text looks like.
 
 ### Step 14
 
-Once you are happy with the top line, press **Return/Enter** to start a new line. 
+Once you are happy with the top line, press **Return/Enter** to start a new line.
 
 Click the **Formatting Styles** drop down to change the text style again.
 
@@ -160,7 +160,7 @@ In this case, we selected the 'Line Title' style.
 
 ### Step 15
 
-Start typing to see the new style. 
+Start typing to see the new style.
 
 ![Add Banner Step 17](../assets/images/AddBanner17.png "Adding Banner Step 17")
 
@@ -182,7 +182,7 @@ When you are creating or updating a page, click the **Add existing Media Asset**
 
 ### Step 2
 
-Enter the name of the banner would like to add to the page. 
+Enter the name of the banner would like to add to the page.
 
 ![Add Existing Banner Step 2](../assets/images/AddExistingBanner2.png "Adding Existing Banner Step 2")
 
@@ -206,7 +206,7 @@ Here are the steps to update a banner.
 
 ### Step 1
 
-On the administration menu, navigate to 
+On the administration menu, navigate to
 
 	Structure > Entity Types > Media Asset > Splash
 
@@ -214,7 +214,7 @@ On the administration menu, navigate to
 
 ### Step 2
 
-You will then see a list of banners that currently exist on the site. 
+You will then see a list of banners that currently exist on the site.
 
 Under the **OPERATIONS** column, click **edit** for the banner you would like to update.
 
@@ -231,5 +231,7 @@ When you're finished click the **Save** button at the bottom of the page.
 
 
 
-
+<p style="margin-top:150px; text-align:right; font-size:90%;">Created on December 20, 2013<br />
+Last modified on December 23, 2013<br />
+Authored by Gray Sadler</p>
 
