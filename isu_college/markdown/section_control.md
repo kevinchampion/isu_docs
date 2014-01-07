@@ -8,7 +8,7 @@
 
 1. [What's section control?](#whats-section-control)
 2. [How does it work?](#how-does-it-work)
-3. [Administrative configuration](#administive-configuration)
+3. [Administrative configuration](#workbench-access-administrative-configuration)
 
 ## What's section control?
 
