@@ -31,7 +31,7 @@ The Workbench Access configuration has two main relevant sections for configurin
 
 ### Editors
 
-On the Editors tab, you can see a list of all the sections in the site that are eligible to assign users to. These "sections" are actually just pages that have been placed in the main menu hierarchy of the site (which categorizes the majority of content in the site). In the Editors table, there is a column titled "Editors", which contains a link to configure individual users who can edit that particular section of the site.
+On the Editors tab, you can see a list of all the sections in the site that are eligible to assign users to. These "sections" are actually just pages that have been placed in the main menu hierarchy of the site (which categorizes the majority of content in the site). In the Editors table, there is a column titled `Editors`, which contains a link to configure individual users who can edit that particular section of the site.
 
 ![Workbench Access Editors](../assets/images/2rxq.png "Workbench Access Editors")
 
@@ -57,7 +57,15 @@ You'll notice this in the default configuration. By default, the college sites a
 ![Main menu section role assignment](../assets/images/3~83.png "Main menu section role assignment")
 
 
-## Administrative configuration
+### My Workbench
+
+Individual users will have a section of their own administrative pages dedicated to their account that's labeled `My Workbench`. One of the pages in `My Workbench` is called `My Sections` and lists the sections of the site that you have been granted access to. For instance, the following is a user who was granted access to the "About" section of the site:
+
+![My Sections](../assets/images/3wz3.png "My Sections")
+
+
+
+## Workbench Access administrative configuration
 
 Workbench Access has a settings tab that configures how it should work.
 
@@ -67,16 +75,21 @@ There are two modes that determine how sections are defined in the site, Menu an
 
 When the menu scheme is in use, there are menu scheme specific settings that define the menu to use for section definition and how users can work with the menus. For the ISU sites, the main menu is used as a centralized hierarchical organization structure, and due to this the main menu works really well for section definition and access control.
 
-The two additional settings help content editors to place their content in the correct location in the menu system. The first "Limit available menu items based on Workbench Access" restricts the menu options within which editors can place content, and the second "Permissions override for creating new menu items" allows for more granular permissions so that users can place content in the main menu without having to have administrative permission for the entire menu system.
+The two additional settings help content editors to place their content in the correct location in the menu system. The first `Limit available menu items based on Workbench Access` restricts the menu options within which editors can place content, and the second `Permissions override for creating new menu items` allows for more granular permissions so that users can place content in the main menu without having to have administrative permission for the entire menu system.
 
 ![Menu access scheme settings](../assets/images/rkk2.png "Menu access scheme settings")
 
-
+The settings have a section for enabling/disabling each content type, which controls whether or not content in it should be restricted by Workbench Access. Some content types perform specialized functionality and they're already restricted to administrative users anyway, so it's not necessary for them to be additionally modified by Workbench Access.
 
 ![Workbench Access content types](../assets/images/hg1p.png "Workbench Access content types")
 
+Lastly, at the bottom of the settings page there are a few final settings. The `Automated section assignment` setting makes it so that as new sections of the site are created, they are automatically added as options for section access control using Workbench Access. The `Allow multiple section assignments` setting enables the ability to place an individual piece of content in more than one section of the site. And the `Require a Workbench Access form element` setting determines if a separate form element should be used on each piece of content to allow content creators to manually place it in a section. In the ISU College sites, this is not necessary because the section it is placed in is being determined by the menu location of the content.
 
-### Permissions
+![Workbench final configs](../assets/images/f9g8.png "Workbench final configs")
+
+
+
+### Workbench Access permissions
 
 Workbench Access has its own permissions, which determine how users can interact with it.
 
@@ -85,5 +98,5 @@ Workbench Access has its own permissions, which determine how users can interact
 
 
 <p style="margin-top:150px; text-align:right; font-size:90%;">Created on January 6, 2014<br />
-Last modified on January 6, 2014<br />
+Last modified on January 7, 2014<br />
 Authored by Kevin Champion</p>
