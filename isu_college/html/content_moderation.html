@@ -1,0 +1,100 @@
+<!DOCTYPE html><html>
+<head><meta charset="UTF-8"><link href='https://dl.dropbox.com/u/57694/documentation/github.css' rel='stylesheet' type='text/css'>
+<style>
+img {
+  zoom:50%;
+}
+img.logo {
+  zoom:100%;
+}
+</style>
+<link rel="shortcut icon" href="favicon.ico" />
+</head><body><p><img class="logo" src="../assets/images/IXM-Transparent-Vertical.jpg" style="float:right; margin:-10px 15px 0 0;" height="90" />
+<img src="../assets/images/isu_logo.png" alt="Indiana State University logo" /></p>
+<a href="index.html">Home</a>
+
+<h1 id="isu-college-sites">ISU College Sites</h1>
+<hr />
+<h1 id="content-moderation">Content Moderation</h1>
+<ol>
+<li><a href="#whats-moderation">What's moderation?</a></li>
+<li><a href="#how-does-it-work">How does it work?</a></li>
+<li><a href="#a-workflow-scenario">A workflow scenario</a></li>
+<li><a href="#administering-states-and-transitions">Administering states and transitions</a></li>
+<li><a href="#administering-email-notifications">Administering email notifications</a></li>
+</ol>
+<h2 id="whats-moderation">What's moderation?</h2>
+<p>Content moderation is the ability to setup and maintain an editing workflow for content that's created for the site. The purpose is to have a defined set of steps that content should go through before it is eventually published to the site. This helps with managing control over the content that's published to the site by maintaining a structure and set of logic over who can publish content and how it can be published.</p>
+<p>It can help to ensure that more than one person reviews content for things like typos, style guide, and content strategy to help produce higher quality content. It can help to enforce a set of standards around how content gets published to the site. It can help to enforce an approval process for content publishing. And it can help to manage the editing and moderation process to facilitate improving and keeping track of content in progress.</p>
+<h2 id="how-does-it-work">How does it work?</h2>
+<p>By default Drupal has a rudimentary form of content moderation. Any piece of content has a couple of states it can be in at any given time: <code>draft</code> and <code>published</code>. This allows content to be edited and saved before it is published, and keeps content from being publicly visible until it is published. This also enables the ability to create and save distinct versions of drafts that are stored as revisions. When a new revision is created and saved, it's stored separately in the database and it can be retrieved, viewed, and reverted at a later state.</p>
+<p><img alt="Revision" src="../assets/images/~xw2.png" title="Revision" /></p>
+<p>For the ISU sites, this default moderation setup is enhanced by implementing a community contributed module called "Workbench Moderation". Workbench Moderation adds an infrastructure for configuring additional moderation states and providing specific workflow around moderation states. Therefore, by default on the ISU sites there are four additional states to the two default states:</p>
+<ul>
+<li><code>Draft</code> -  Work remains unpublished and is a work in progress.</li>
+<li><code>Needs Work</code> - Work remains unpublished, has already been submitted for review, and a reviewer has moderated it and found it to be not ready yet. Typically the original author would need to improve it and re-submit by saving it once more to <code>Needs Review</code>.</li>
+<li><code>Needs Review</code> - Work remains unpublished, the author has completed the piece of content and is ready for it to be published.</li>
+<li><code>Needs Approval</code> - Work remains unpublished, the reviewer has moderated the content and has marked it for final approval before publishing.</li>
+<li><code>Published</code> - Work is now published, having been reviewed and approved by individuals with the appropriate permissions.</li>
+<li><code>Archived</code> - Work remains unpublished, the content was once published and is no longer in use, but needs to remain in the site instead of being deleted.</li>
+</ul>
+<p><img alt="States" src="../assets/images/ye2n.png" title="States" /></p>
+<p>According to these sensible defaults, an individual piece of content would go through the following states through its life-cycle:</p>
+<p><code>Draft</code> -&gt; <code>Needs Review</code> -&gt; <code>Needs Approval</code> -&gt; <code>Published</code></p>
+<p>It may also get pushed back to <code>Needs Work</code> if a reviewer does not approve the content, as well as being placed in <code>Archived</code> state if the content is no longer needed.</p>
+<p>In addition to providing new states, Workbench Moderation forces all saved content to be saved as a new revision, adds custom workflow utilizing these states, and provides an interface for viewing the moderation steps of individual pieces of content.</p>
+<p>Despite these additional states, it's not necessary for all pieces of content to go through each of these steps before it can be published. As with everything in Drupal, ability of an individual user is controlled by permissions. This means that a sufficiently privileged user can skip over states and publish content without following the prescribed workflow when necessary. The purpose for states and workflow is to provide artificial constraints to users so that you can maintain high quality content.</p>
+<h2 id="a-workflow-scenario">A workflow scenario</h2>
+<p>With the defaults setup for the ISU sites, the most involved content moderation workflow to get a piece of content published would involve three individuals and five moderation states. In this scenario, we'll assume we have three roles:</p>
+<ul>
+<li>content creator</li>
+<li>content moderator</li>
+<li>content manager</li>
+</ul>
+<hr />
+<hr />
+<ol>
+<li>
+<p>The content creator creates a piece of content and saves it. She comes back the next day and edits her draft, finalizing it for publishing. She saves the finalized draft to the <code>Needs Review</code> state.</p>
+<p><img alt="Save as Needs Review" src="../assets/images/_7dn.png" title="Save as Needs Review" /></p>
+<p>You'll notice here that the content creator does not have all states available to her. In fact, she can only save content as a <code>Draft</code> or as <code>Needs Review</code>.</p>
+</li>
+<li>
+<p>The content moderator is notified and sees that the content creator has a new piece of content and has saved it as <code>Needs Review</code>. The content moderator reviews the content, improves a few typos, but still finds it in need of improvement. The content moderator saves it as <code>Needs Work</code> and adds notes about what needs to be improved.</p>
+<p><img alt="Save as Needs Work" src="../assets/images/w3mu.png" title="Save as Needs Work" /></p>
+<p>Notice that adding the revision notes about what needs to be done next will pass those notes back to the content creator so she'll know what needs to be done.</p>
+<p><img alt="Moderate tab" src="../assets/images/9~sz.png" title="Moderate tab" /></p>
+<p>Each piece of content now has a "Moderate" tab that provides an interface to see the revisions of the content and how it's transitioned through states. It also includes the revision message and metadata about who moderated it and when.</p>
+</li>
+<li>
+<p>The content creator is notified that her content still needs improvement, fixes up the problems, and once again saves it as <code>Needs Review</code>.</p>
+</li>
+<li>The content moderator receives the content once more, reviews it, and feels that it's ready to be published. She saves it as <code>Needs Approval</code>.</li>
+<li>
+<p>The content manager is notified that there is content ready for final approval, sees the new content, and approves it. At this point the content manager saves it as <code>Published</code>, and the content is then live on the site.</p>
+<p><img alt="Published" src="../assets/images/gwtk.png" title="Published" /></p>
+</li>
+</ol>
+<p>This scenario covers a robust workflow whereby three individuals must review each piece of content before it can be published. However, in some scenarios this may be overkill. For that reason, it is also possible to simplify this workflow by not using the <code>Needs Approval</code> state, and simply going directly from <code>Needs Review</code> to <code>Published</code>.</p>
+<h2 id="administering-states-and-transitions">Administering states and transitions</h2>
+<p>The default states are setup to be sensible, but additional states can be created by users with administrative privileges to do so. Workbench Moderation has its own configuration pages.</p>
+<p>/admin/config/workbench/moderation</p>
+<p><img alt="Workbench Moderation config" src="../assets/images/kpr6.png" title="Workbench Moderation config" /></p>
+<p>On the States page you can see the existing moderation states and their descriptions. It's here that you can also add new states for moderation. The name and description are purely semantic, meaning that they're technically arbitrary and their purpose will be defined based on what you decide their purpose should be.</p>
+<p><img alt="Workbench Moderation states" src="../assets/images/4hno.png" title="Workbench Moderation states" /></p>
+<p>How a state works is largely defined by the transitions that you define for it. On the Transitions page, you can set how the state is allowed to transition to and from other states. If you state doesn't contain a transition from another state, the state won't be able to be applied to the content when it's currently in the other state.</p>
+<p><img alt="Workbench Moderation transitions" src="../assets/images/-dxj.png" title="Workbench Moderation transitions" /></p>
+<p>The last piece to the puzzle is to configure permissions for the states and transitions. Just creating and state and setting up transitions generates the structure, but it's through user permissions that you define who can and cannot use those states and transitions. By navigating to the user permissions page and selecting the Workbench Moderation section, you can modify those permissions.</p>
+<p>/admin/people/permissions</p>
+<p><img alt="Workbench Moderation permissions" src="../assets/images/4bzc.png" title="Workbench Moderation permissions" /></p>
+<h2 id="administering-email-notifications">Administering email notifications</h2>
+<p>The moderation of content can be setup to send emails when content is transitioned from one state to another. For this functionality, there is an "Email Transitions" page to configure what transitions should trigger email notifications.</p>
+<p><img alt="Workbench Moderation email tranistions" src="../assets/images/~_ar.png" title="Workbench Moderation email tranistions" /></p>
+<p>Once a transition is selected, the Emails tab can be used to configure the subject and body message of the email that will be sent when the transition occurs.</p>
+<p><img alt="Workbench Moderation email content" src="../assets/images/jrfh.png" title="Workbench Moderation email content" /></p>
+<p>When a user creates a piece of content and transitions it from a state to another state that has an email transition setup for it, she will be given a list of users based on the role assigned to the email transition who she can select from to send the email notification to.</p>
+<p><img alt="Workbench Moderation email recipient" src="../assets/images/an81.png" title="Workbench Moderation email recipient" /></p>
+<p style="margin-top:150px; text-align:right; font-size:90%;">Created on January 6, 2014<br />
+Last modified on January 7, 2014<br />
+Authored by Kevin Champion</p>
+</body>
