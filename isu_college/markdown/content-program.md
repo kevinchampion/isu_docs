@@ -24,7 +24,7 @@ In the Administration Menu, navigate to:
 ![Add a program](../assets/images/ProgramAdd.png "Add a program")
 
 ### 2. Add a banner
-Add a new or existing [Banner Slide](banner-slides.md).
+Add a new or existing [Banner Slide](banner_slides.md).
 
 ![Banner Add](../assets/images/BannerAdd.png "Banner Add")
 
