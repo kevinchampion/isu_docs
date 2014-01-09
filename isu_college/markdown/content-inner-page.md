@@ -1,6 +1,8 @@
 <img class="logo" src="../../global_assets/images/IXM-Transparent-Vertical.jpg" style="float:right; margin:-10px 15px 0 0;" height="90" />
 <img class="logo" src="../assets/images/isu_logo.png" alt="Indiana State University logo" />
 
+<a href="index.html">Home</a>
+
 # Inner pages
 
 * [What are inner pages?](#what-are-inner pages)
@@ -14,15 +16,15 @@
 
 Inner pages are a **content type** similar to a page, but are considered child pages and therefore inherit properties of the content you are creating an inner page of.
 
-For example, if you were to create an **inner page** for a Department, the **inner page** would inherit the top banner and Department Menu of that Department. 
+For example, if you were to create an **inner page** for a Department, the **inner page** would inherit the top banner and Department Menu of that Department. Before creating an Inner Page, make sure you have already created the parent Page, Department, Center, or Program that the Inner Page will be a child of.
 
 ## Creating inner pages
 
 ### 1. Open the 'Create inner page' form
 In the Administration Menu, navigate to:
-	
+
 	My Workbench > Create content > Inner page
-		
+
 ![Add a inner page](../assets/images/InnerPageAdd.png "Add a inner page")
 
 ### 2. Select a banner
@@ -44,7 +46,7 @@ Enter the **Title** for this inner page.
 ![inner page Title](../assets/images/PageTitle.png "inner page Title")
 
 ### 4. Add copy
-Enter the **Body** of this department. This is the main copy of your inner page. 
+Enter the **Body** of this department. This is the main copy of your inner page.
 
 ![inner page Body](../assets/images/PageBody.png "inner page Body")
 
@@ -56,7 +58,7 @@ Using the editor toolbar, you can add images or format your copy.
 
 Select an **Image** for this inner page.
 
-![inner page Image](../assets/images/inner pageImage.png "inner page Image")
+![inner page Image](../assets/images/PageImage.png "inner page Image")
 
 ### 6. Menu settings
 
@@ -64,7 +66,7 @@ Choose a **Menu link title** which will be the name of the menu item displayed.
 
 ![Menu Link Title](../assets/images/MenuLinkTitle.png "Menu Link Title")
 
-The **Parent item** is the location where this inner page will be found in the menu. The **Parent item** must be content such as a Department, Page, Program or Center. 
+The **Parent item** is the location where this inner page will be found in the menu. The **Parent item** must be content such as a Department, Page, Program or Center.
 
 ![Menu Parent](../assets/images/MenuParent.png "Menu Parent")
 
@@ -120,7 +122,7 @@ Select the layout you would like for this inner page.
 
 ### 3. Approve content locations
 
-Move content around and once you are satisfied, click **Save**. 
+Move content around and once you are satisfied, click **Save**.
 
 ![Layout Save](../assets/images/LayoutSave.png "Layout Save")
 
@@ -134,12 +136,16 @@ On the inner page you want to customize, click the **Customize this inner page**
 
 ### 2. Update the content
 
-Make the changes that you want. 
+Make the changes that you want.
 
 For a more detailed tutorial, please read [Customizing inner pages]()
 
 ### 3. Save your changes
 
-Once you are satisfied with the changes, click **Save**. 
+Once you are satisfied with the changes, click **Save**.
 
 ![Customize Save](../assets/images/CustomizeSave.png "Customize Save")
+
+<p style="margin-top:150px; text-align:right; font-size:90%;">Created on January 7, 2014<br />
+Last modified on January 9, 2014<br />
+Authored by Gray Sadler</p>

@@ -1,6 +1,8 @@
 <img class="logo" src="../../global_assets/images/IXM-Transparent-Vertical.jpg" style="float:right; margin:-10px 15px 0 0;" height="90" />
 <img class="logo" src="../assets/images/isu_logo.png" alt="Indiana State University logo" />
 
+<a href="index.html">Home</a>
+
 # Audiences
 
 * [What are audiences?](#what-are-audiences)
@@ -12,7 +14,7 @@
 
 ## What are audiences?
 
-audiences are a **content type** that represent the audiences inside your college. 
+Audiences are a **content type** that represent the audiences inside your college.
 
 Each audience created populates the Audience menu.
 
@@ -22,9 +24,9 @@ Each audience created populates the Audience menu.
 
 ### 1. Open the 'Create audience' form
 In the Administration Menu, navigate to:
-	
+
 	My Workbench > Create content > Audience
-		
+
 ![Add an audience](../assets/images/AudienceAdd.png "Add an audience")
 
 ### 2. Choose an Audience Name
@@ -33,7 +35,7 @@ Enter the name of the **Audience**.
 ![Audience Name](../assets/images/AudienceName.png "Audience Name")
 
 ### 3. Add copy
-Enter the **Message** of this audience. This is the main copy of your page. 
+Enter the **Message** of this audience. This is the main copy of your page.
 
 ![Message](../assets/images/Message.png "Message")
 
@@ -105,7 +107,7 @@ Select the layout you would like for this audience.
 
 ### 3. Approve content locations
 
-Move content around and once you are satisfied, click **Save**. 
+Move content around and once you are satisfied, click **Save**.
 
 ![Layout Save](../assets/images/LayoutSave.png "Layout Save")
 
@@ -119,12 +121,16 @@ On the audience you want to customize, click the **Customize this page** button 
 
 ### 2. Update the content
 
-Make the changes that you want. 
+Make the changes that you want.
 
 For a more detailed tutorial, please read [Customizing Pages]()
 
 ### 3. Save your changes
 
-Once you are satisfied with the changes, click **Save**. 
+Once you are satisfied with the changes, click **Save**.
 
 ![Customize Save](../assets/images/CustomizeSave.png "Customize Save")
+
+<p style="margin-top:150px; text-align:right; font-size:90%;">Created on January 7, 2014<br />
+Last modified on January 9, 2014<br />
+Authored by Gray Sadler</p>

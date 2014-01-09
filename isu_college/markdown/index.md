@@ -12,6 +12,12 @@ This is an index page for the documentation pages completed for ISU College site
 
 ### Content Creation
 
+- [Page](content-page.html)
+- [Inner Page](content-inner-page.html)
+- [Department](content-department.html)
+- [Program](content-program.html)
+- [Center](content-center.html)
+- [Audience](content-audience.html)
 - [Banner Slides](banner_slides.html)
 
 ### Content Administration
@@ -21,5 +27,5 @@ This is an index page for the documentation pages completed for ISU College site
 
 
 <p style="margin-top:150px; text-align:right; font-size:90%;">Created on January 6, 2014<br />
-Last modified on January 6, 2014<br />
+Last modified on January 9, 2014<br />
 Authored by Kevin Champion</p>

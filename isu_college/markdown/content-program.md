@@ -1,6 +1,8 @@
 <img class="logo" src="../../global_assets/images/IXM-Transparent-Vertical.jpg" style="float:right; margin:-10px 15px 0 0;" height="90" />
 <img class="logo" src="../assets/images/isu_logo.png" alt="Indiana State University logo" />
 
+<a href="index.html">Home</a>
+
 # Programs
 
 * [What are programs?](#what-are-programs)
@@ -12,15 +14,15 @@
 
 ## What are programs?
 
-Programs are a **content type** that represent the programs/majors inside your college. 
+Programs are a **content type** that represent the programs/majors inside your college.
 
 ## Creating programs
 
 ### 1. Open the 'Create program' form
 In the Administration Menu, navigate to:
-	
+
 	My Workbench > Create content > Program
-		
+
 ![Add a program](../assets/images/ProgramAdd.png "Add a program")
 
 ### 2. Add a banner
@@ -36,14 +38,14 @@ Enter the **Program Name** for this program.
 ### 4. Choose a shortened program name
 Enter the **Shortened Program Name** for this program.
 
-This short name will be used in the program's url and other areas around the site. 
+This short name will be used in the program's url and other areas around the site.
 
 An **example** of a shortened name for the <i>Graphic Design Concentration</i> would be <i>Graphic Design</i>
 
 ![Program Name](../assets/images/ShortenedProgramName.png "Program Name")
 
 ### 5. Add copy
-Enter the **Description** of this page. This is the main copy of your program. 
+Enter the **Description** of this page. This is the main copy of your program.
 
 ![Description](../assets/images/Description.png "Description")
 
@@ -163,7 +165,7 @@ Select the layout you would like for this program.
 
 ### 3. Approve content locations
 
-Move content around and once you are satisfied, click **Save**. 
+Move content around and once you are satisfied, click **Save**.
 
 ![Layout Save](../assets/images/LayoutSave.png "Layout Save")
 
@@ -177,12 +179,17 @@ On the program you want to customize, click the **Customize this page** button l
 
 ### 2. Update the content
 
-Make the changes that you want. 
+Make the changes that you want.
 
 For a more detailed tutorial, please read [Customizing Pages]()
 
 ### 3. Save your changes
 
-Once you are satisfied with the changes, click **Save**. 
+Once you are satisfied with the changes, click **Save**.
 
 ![Customize Save](../assets/images/CustomizeSave.png "Customize Save")
+
+
+<p style="margin-top:150px; text-align:right; font-size:90%;">Created on January 7, 2014<br />
+Last modified on January 9, 2014<br />
+Authored by Gray Sadler</p>
