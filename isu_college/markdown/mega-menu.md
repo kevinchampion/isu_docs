@@ -26,37 +26,43 @@ In the Administration Menu, navigate to:
 	
 	Structure > Mini panels > Add
 		
-![Add a Mini Panel](../assets/images/MiniPanelAdd.png "Add a Mini Panel")
+![Mini Panel](../assets/images/MiniPanelAdd.png "Mini Panel")
 
 Enter the **Administrative title** for this mini panel. The title will only be used to identify this mini panel for configuration purposes.
 
-[image]
+![Mini Panel](../assets/images/MiniPanelAdminTitle.png "Mini Panel")
 
 You may want to enter a **Administrative description** especially if you are creating a lot of similar mini panels.
 
-[image]
+![Mini Panel](../assets/images/MiniPanelAdminDesc.png "Mini Panel")
 
 Type in **Mega Menu** as the **Category**. While typing, it should auto-populate with **Mega Menu** for you as seen in the image below.
 
-[image]
+![Mini Panel](../assets/images/MiniPanelCategory.png "Mini Panel")
+
 
 Click **Continue**
 
-[image]
+![Mini Panel](../assets/images/MiniPanelContinue.png "Mini Panel")
+
 
 Don't be overwhelemed by the next screen. Just click **Continue**.
 
-[image]
+![Mini Panel](../assets/images/MiniPanelContext.png "Mini Panel")
+
 
 Next, select the layout for this mini panel. Remember, a mini panel is like a block of content that is not the size of a full page.
 
 Once you've selected the layout click **Continue**
 
-[image]
+![Mini Panel](../assets/images/MiniPanelLayout.png "Mini Panel")
+
 
 In this example, I've selected a four column layout. 
 
 In the **First** column, click the gear icon and select **Add content** 
+
+![Mini Panel](../assets/images/MiniPanelFirstGear.png "Mini Panel")
 
 For this example, I've already created some example [Blocks](blocks.md) so we will be adding those to our mini panel.
 
