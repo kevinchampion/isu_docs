@@ -19,7 +19,7 @@ Programs are a **content type** that represent the programs/majors inside your c
 ### 1. Open the 'Create program' form
 In the Administration Menu, navigate to:
 	
-	Content > Add content > Program
+	My Workbench > Create content > Program
 		
 ![Add a program](../assets/images/ProgramAdd.png "Add a program")
 

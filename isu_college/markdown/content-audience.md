@@ -23,7 +23,7 @@ Each audience created populates the Audience menu.
 ### 1. Open the 'Create audience' form
 In the Administration Menu, navigate to:
 	
-	Content > Add content > Audience
+	My Workbench > Create content > Audience
 		
 ![Add an audience](../assets/images/AudienceAdd.png "Add an audience")
 

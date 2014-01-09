@@ -19,7 +19,7 @@ Pages are a **content type** that can be used to create a page on your site whic
 ### 1. Open the 'Create Page' form
 In the Administration Menu, navigate to:
 	
-	Content > Add content > Page
+	My Workbench > Create content > Page
 		
 ![Add a page](../assets/images/PageAdd.png "Add a page")
 
