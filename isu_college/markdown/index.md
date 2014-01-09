@@ -26,6 +26,13 @@ This is an index page for the documentation pages completed for ISU College site
 - [Content Moderation](content_moderation.html)
 
 
+### Development
+
+Most of the development specific documentation resides in the ImageX InstallKit repository documentation, which outlines the general architecture for how the ISU College sites are developed and how to work with an inheritable profile architecture in Drupal using Drush make.
+
+- [ImageX InstallKit documentation](https://github.com/imagex/imagex_installkit/wiki)
+
+
 <p style="margin-top:150px; text-align:right; font-size:90%;">Created on January 6, 2014<br />
 Last modified on January 9, 2014<br />
 Authored by Kevin Champion</p>
