@@ -41,16 +41,16 @@ Click on the **Banner** section and proceed to add a new or existing banner.
 ### 3. Choose a title
 Enter the **Title** for this inner page.
 
-![inner page Title](../assets/images/inner pageTitle.png "inner page Title")
+![inner page Title](../assets/images/PageTitle.png "inner page Title")
 
 ### 4. Add copy
 Enter the **Body** of this department. This is the main copy of your inner page. 
 
-![inner page Body](../assets/images/inner pageBody.png "inner page Body")
+![inner page Body](../assets/images/PageBody.png "inner page Body")
 
 Using the editor toolbar, you can add images or format your copy.
 
-![inner page Body Toolbar](../assets/images/inner pageBodyToolbar.png "inner page Body Toolbar")
+![Inner page Body Toolbar](../assets/images/PageBodyToolbar.png "inner page Body Toolbar")
 
 ### 5. Add an image
 
