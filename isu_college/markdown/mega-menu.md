@@ -6,7 +6,6 @@
 * [What is a mega menu](#what-are-pages)
 * [Creating a mega menu](#creating-pages)
 * [Updating a mega menu](#updating-pages)
-* [Deleting a mega menu](#deleting-pages)
 
 ## What is a mega menu?
 
@@ -61,6 +60,8 @@ Once you've selected the layout click **Continue**
 In this example, I've selected a four column layout. 
 
 In the **First** column, click the gear icon and select **Add content** 
+
+![Mini Panel](../assets/images/MiniPanelContent.png "Mini Panel")
 
 ![Mini Panel](../assets/images/MiniPanelFirstGear.png "Mini Panel")
 
@@ -124,6 +125,23 @@ It should now have the **About** mini panel that you created inside on hover of 
 [image]
 
 ## Updating a mega menu
-## Deleting a mega menu
+
+### 1. Load the Mini Panel you want to edit
+
+In the Administration Menu, navigate to:
+	
+	Structure > Mini panels
+	
+![Mini Panel](../assets/images/MiniPanelList.png "Mini Panel")	
+
+Find the Mega Menu mini panel you would like to edit and click the **Edit** link under the **OPERATIONS** column.
+
+![Mini Panel](../assets/images/MiniPanelEdit.png "Mini Panel")	
+
+If you are wanting to update the content within this mini panel, click on the **Content** link identified in the image below.
+
+![Mini Panel](../assets/images/MiniPanelEditContentLink.png "Mini Panel")	
+
+Make your changes and be sure to click the **Save** button when you are finished.
 
 
