@@ -1,6 +1,8 @@
 <img class="logo" src="../../global_assets/images/IXM-Transparent-Vertical.jpg" style="float:right; margin:-10px 15px 0 0;" height="90" />
 <img class="logo" src="../assets/images/isu_logo.png" alt="Indiana State University logo" />
 
+<a href="index.html">Home</a>
+
 # Pages
 
 * [What are pages?](#what-are-pages)
@@ -12,15 +14,15 @@
 
 ## What are pages?
 
-Pages are a **content type** that can be used to create a page on your site which contains copy and/or widgets.
+Pages are a **content type** that can be used to create a page on your site which contains copy and/or widgets. A Page defines a section of the site that can be considered a "sub-site" homepage within that section. Subsequent child pages of that section should be built out using the [Inner Page](../content-inner-page.html) content type. Typically, Pages will be top-level menu items, but from time-to-time it will be appropriate for them to fit farther down in the menu hierarchy. The key with Pages is to use them judiciously when you're attempting to define a section homepage or a single one-off page that doesn't have any children.
 
 ## Creating pages
 
 ### 1. Open the 'Create Page' form
 In the Administration Menu, navigate to:
-	
+
 	My Workbench > Create content > Page
-		
+
 ![Add a page](../assets/images/PageAdd.png "Add a page")
 
 ### 2. Add a banner
@@ -34,7 +36,7 @@ Enter the **Title** for this page.
 ![Page Title](../assets/images/PageTitle.png "Page Title")
 
 ### 4. Add copy
-Enter the **Body** of this department. This is the main copy of your page. 
+Enter the **Body** of this department. This is the main copy of your page.
 
 ![Page Body](../assets/images/PageBody.png "Page Body")
 
@@ -67,7 +69,7 @@ By default, the url of this page will be generated automatically. If you would l
 
 ![Path Checkbox](../assets/images/PathCheckbox.png "Path Checkbox")
 
-Then you may enter a custom **URL alias** 
+Then you may enter a custom **URL alias**
 
 ![Path Alias](../assets/images/PathAlias.png "Path Alias")
 
@@ -121,7 +123,7 @@ Select the layout you would like for this page.
 
 ### 3. Approve content locations
 
-Move content around and once you are satisfied, click **Save**. 
+Move content around and once you are satisfied, click **Save**.
 
 ![Layout Save](../assets/images/LayoutSave.png "Layout Save")
 
@@ -135,12 +137,16 @@ On the page you want to customize, click the **Customize this page** button loca
 
 ### 2. Update the content
 
-Make the changes that you want. 
+Make the changes that you want.
 
 For a more detailed tutorial, please read [Customizing Pages]()
 
 ### 3. Save your changes
 
-Once you are satisfied with the changes, click **Save**. 
+Once you are satisfied with the changes, click **Save**.
 
 ![Customize Save](../assets/images/CustomizeSave.png "Customize Save")
+
+<p style="margin-top:150px; text-align:right; font-size:90%;">Created on January 7, 2014<br />
+Last modified on January 9, 2014<br />
+Authored by Gray Sadler</p>
