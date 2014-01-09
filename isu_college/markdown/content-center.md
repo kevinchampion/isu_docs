@@ -12,7 +12,7 @@
 
 ## What are centers?
 
-centers are a **content type** that represent the centers inside your college. 
+Centers are a **content type** that represent the centers inside your college. 
 
 ## Creating centers
 
@@ -31,7 +31,7 @@ Add a new or existing [Banner Slide](banner_slides.md).
 ### 3. Choose a center Name
 Enter the **Center Name** for this center.
 
-![Dept Name](../assets/images/centerName.png "DeptName")
+![Dept Name](../assets/images/CenterName.png "DeptName")
 
 ### 4. Choose a Shortened Center Name
 Enter the **Shortened Center Name** for this center.
@@ -40,7 +40,7 @@ This short name will be used in the center's url and other areas around the site
 
 An **example** of a shortened name for the <i>center of Biology</i> would be <i>Biology</i>
 
-![Center Name](../assets/images/ShortenedCenterName.png "CenterName")
+![Center Name](../assets/images/CenterShortenedName.png "CenterName")
 
 ### 5. Add copy
 Enter the **Description** of this page. This is the main copy of your page. 
