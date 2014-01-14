@@ -37,7 +37,7 @@ Located at the top right of each section are two buttons with two specific purpo
 
 Only certain content can be added to sections of a page. Reusable content such as blocks, widgets, images, etc are examples of reusable content. If you created a piece of content on the site, chances are you can add it to a section in a page.
 
-Clicking the **add/plus sign** allows you to add content to a section. Content is categories based on type. In most cases, Blocks and Miscellaneous type content will be the main categories you will be searching for content.
+Clicking the **add/plus sign** allows you to add content to a section. Content is categorized based on type. In most cases, Blocks and Miscellaneous type content will be the main categories you will be searching for content.
 
 ![Customize Buttons](../assets/images/CustomizeButtons.png "Customize Buttons")
 
