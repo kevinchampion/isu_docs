@@ -20,6 +20,13 @@ This is an index page for the documentation pages completed for ISU College site
 - [Audience](content-audience.html)
 - [Banner Slides](banner_slides.html)
 
+### Content Structure
+
+- [Blocks](blocks.html)
+- [Menus](menus.html)
+- [Panelizer](panelizer.html)
+- [Widgets](widgets.html)
+
 ### Content Administration
 
 - [Section Control](section_control.html)
@@ -34,5 +41,5 @@ Most of the development specific documentation resides in the ImageX InstallKit 
 
 
 <p style="margin-top:150px; text-align:right; font-size:90%;">Created on January 6, 2014<br />
-Last modified on January 9, 2014<br />
+Last modified on January 15, 2014<br />
 Authored by Kevin Champion</p>

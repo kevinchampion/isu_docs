@@ -17,6 +17,12 @@ This is an index page for the documentation pages completed for ISU Primary site
 - [Banner Slides](banner_slides.html)
 - [User Alerts](user_alert.html)
 
+### Content Structure
+
+- [Blocks](blocks.html)
+- [Menus](menus.html)
+- [Panelizer](panelizer.html)
+
 ### Content Administration
 
 - [Academics landing page](academics_landing.html)
@@ -29,5 +35,5 @@ This is an index page for the documentation pages completed for ISU Primary site
 
 
 <p style="margin-top:150px; text-align:right; font-size:90%;">Created on January 6, 2014<br />
-Last modified on January 6, 2014<br />
+Last modified on January 15, 2014<br />
 Authored by Kevin Champion</p>

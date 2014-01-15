@@ -6,7 +6,7 @@
 * [What is a widget](#what-are-widgets)
 * [Adding a widget](#adding-a-widget)
 * [Basic Blocks](#basic-blocks)
-* [Image Blockst](#image-blocks)
+* [Image Blocks](#image-blocks)
 * [Code Blocks](#code-blocks)
 * [Link Blocks](#link-blocks)
 * [RSS Feed Widgets](#rss-feed-widgets)
@@ -14,7 +14,7 @@
 
 ## What is a widget?
 
-A widget is a block of content that can be placed on any page on the site.
+A widget is a [block](blocks.html) of content that can be placed on any page on the site. When you create a widget, it can be used as a block, meaning that it can be placed in a region of the site and shown using standard visibility settings. It can also be placed in a mini-panel or in [panelizer](panelizer.html) on an individual page.
 
 There are different types of widgets:
 
@@ -31,17 +31,17 @@ There are different types of widgets:
 In order to add a new widget, you will have to create a new instance of one.
 
 In the Administration Menu, navigate to:
-	
+
 	Content > Add Block > [Type of widget]
-		
+
 ![Block](../assets/images/BlockAdd.png "Block")
 
 ## Updating a widget
 
 In the Administration Menu, navigate to:
-	
+
 	Widgets
-	
+
 ![Block](../assets/images/AdminMenuWidgets.png "Block")
 
 Select the widget you want to update, and click **edit** under the **OPERATIONS** column.
@@ -51,7 +51,7 @@ Select the widget you want to update, and click **edit** under the **OPERATIONS*
 
 ## Image Blocks
 
-**Image Blocks** allow content authors to create a block which consists of a single image. 
+**Image Blocks** allow content authors to create a block which consists of a single image.
 
 ## Code Blocks
 
@@ -63,7 +63,7 @@ Select the widget you want to update, and click **edit** under the **OPERATIONS*
 
 ## RSS Feed Widgets
 
-**RSS Feed Widgets** allow content authors to create a block of rss items (results). RSS results are displayed in a simple vertical list. 
+**RSS Feed Widgets** allow content authors to create a block of rss items (results). RSS results are displayed in a simple vertical list.
 
 Below is an example of an RSS Feeds Widget that pulls in news items from the primary ISU site.
 
@@ -88,5 +88,7 @@ Below is an example of an RSS Feeds Widget that pulls in news items from the pri
 ![RSS](../assets/images/RSSFeedLink.png "RSS")
 
 
-
+<p style="margin-top:150px; text-align:right; font-size:90%;">Created on January 8, 2014<br />
+Last modified on January 8, 2014<br />
+Authored by Gray Sadler</p>
 
