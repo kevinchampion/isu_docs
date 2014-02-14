@@ -57,6 +57,10 @@ Select the widget you want to update, and click **edit** under the **OPERATIONS*
 
 **Code Blocks** allow content authors to insert javascript or php into the page. This action should only be completed by advanced users.
 
+Copy and paste the code snippet into the **Code** field.
+
+![Code Blocks](../assets/images/CodeWidget.png "Code Blocks")
+
 ## Link Blocks
 
 **Link blocks** allow content authors to create a block of links. Links are displayed in a simple vertical list.
