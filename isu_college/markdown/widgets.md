@@ -93,6 +93,6 @@ Below is an example of an RSS Feeds Widget that pulls in news items from the pri
 
 
 <p style="margin-top:150px; text-align:right; font-size:90%;">Created on January 8, 2014<br />
-Last modified on January 8, 2014<br />
+Last modified on February 12, 2014<br />
 Authored by Gray Sadler</p>
 
