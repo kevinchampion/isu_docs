@@ -10,6 +10,8 @@
 * [Faculty Images](#faculty-images)
 * [Syncing User to Profile](#syncing-user-to-profile)
 * [Search Index](#search-index)
+* [SSO Login](#sso-login)
+* [LDAP SSO Decision](#ldap-sso-decision)
 * [Troubleshooting](#troubleshooting)
 
 ## Import Process
