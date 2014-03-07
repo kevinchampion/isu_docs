@@ -51,7 +51,7 @@ Below are descriptions of each taxonomy and their intended purpose:
 
 If you have an adequate role, you can use an alternate image for your Faculty/Staff profile. 
 
-On the **Update Faculty Profile** page, scroll down below the normal Banner Image and you should have an option to add or update the **Override Banner Image** field.
+On the [Update Faculty Profile](http://cms.indstate.edu/admin/faculty-edit) page, scroll down below the normal Banner Image and you should have an option to add or update the **Override Banner Image** field.
 
 ![OverrideBannerImage](../assets/images/OverrideBannerImage.png "Override Banner Image")
 
