@@ -126,16 +126,16 @@ The location of the settings where non-SSL configuration is set can be found her
 ## Troubleshooting
 Here are a list of potential problems that may arise in the future.
 
-* Faculty profiles aren't updating/importing
+* **Faculty profiles aren't updating/importing**
 	* Verify that ISU is still updating the files in /home/ccidman
 	* Verify that the Jenkins job is updating /default/files/feeds
 	* Verify that the file name is correct on /admin/config/people/isu_faculty
-* SSO is not working
+* **SSO is not working**
 	* Check the dblog for ldap errors	 	
 	* If error log doesn't reveal obvious answer, test LDAP connection by going to [http://cms.indstate.edu/admin/config/people/ldap/servers/test/isu](http://cms.indstate.edu/admin/config/people/ldap/servers/test/isu) and clicking **Test** 
 	* If the test returns LDAP data, you know that an LDAP connection is being made. If not, there is a problem connecting to the LDAP server.
-* Faculty images are not updating
+* **Faculty images are not updating**
 	* Connect to the ISU VPN and manually type in the url (found [here](http://cms.indstate.edu/admin/config/people/isu_faculty)) with a real PIDM number. 
 	* If no image is loaded from the url, you will know to contact ISU to get further information
-* Faculty profiles aren't appearing in search results
+* **Faculty profiles aren't appearing in search results**
 	* Make sure the nodes are being indexed by navigating to [http://cms.indstate.edu/admin/config/search/search_api/index/faculty](http://cms.indstate.edu/admin/config/search/search_api/index/faculty) and ensuring the processor settings are correct. Information about that can be found [here](#search-index).
