@@ -28,19 +28,23 @@ At **2:00 am**, a Jenkins job copies all files located in the `/home/ccidman` di
 The faculty profile fields that are updated during isu_faculty_cron are followed below. Fields that have custom modifications have explainations provided.
 
 * **title**: the field_first_name and field_last_name create the title
-* **field_name_prefix**
-* **field_first_name**
-* **field_middle_name**
-* **field_last_name**
-* **field_name_suffix**
-* **field_job_title**
-* **field_id**
-* **field_pidm**
-* **field_email**
-* **field_office**
-* **field_telephone**: the output of this field has hard-coded area code and three digit prefix if needed.
+* **field_name_prefix**: PZVDIRE_NAME_PREFIX
+* **field_first_name**: PZVDIRE_NAME_FIRST
+* **field_middle_name**: PZVDIRE_NAME_MIDDLE
+* **field_last_name**: PZVDIRE_NAME_LAST
+* **field_name_suffix**: PZVDIRE_NAME_SUFFIX
+* **field_job_title**: PZVDIRE_JOB_DESC
+* **field_id**: PZVDIRE_ID
+* **field_pidm**: PZVDIRE_PIDM
+* **field_email**: PZVDIRE_OFFICE_EMAIL
+* **field_office**: PZVDIRE_OFFICE_STREET_LINE1
+* **field_telephone**: 
+	* PZVDIRE_OFFICE_PHONE 
+	* the output of this field has hard-coded area code and three digit prefix if needed.
 * **field_banner_image**: This field is populated by using ISU's image API which is currently in a development state and may be updated. An updatable setting has been added to allow site admins to update the url of the image API in the event that ISU updates their endpoint url. See [here](#faculty-images) for more information.
-* **field_faculty_department_banner**: This taxonomy term_reference has two fields which are used to group data for external use: field_parent_organization and field_faculty_department. These fields are not saved on the faculty content, they are saved in the taxonomy term object.
+* **field_faculty_department_banner**:
+	* PZVDIRE_JOB_DEPT
+	* This taxonomy term_reference has two fields which are used to group data for external use: field_parent_organization and field_faculty_department. These fields are not saved on the faculty content, they are saved in the taxonomy term object.
 
 ## Faculty Images
 
@@ -59,10 +63,9 @@ When a user logs in, the LDAP module attempts to sync the Drupal user to an LDAP
 
 ## Search Index
 
-Faculty searching on /search/faculty-staff is based on the view **isu_faculty** which is a search_api index view. This means that unless faculty is indexed, no results will appear here.
+Faculty searching on [http://cms.indstate.edu/search/faculty-staff](http://cms.indstate.edu/search/faculty-staff) is based on the view **isu_faculty** which is a search_api index view. This means that unless faculty is indexed, no results will appear here.
 
-The faculty index settings can be found here: 
-`/admin/config/search/search_api/index/faculty`
+The faculty index settings can be found at [http://cms.indstate.edu/admin/config/search/search_api/index/faculty](http://cms.indstate.edu/admin/config/search/search_api/index/faculty)
 
 It is important to know that the order of the index processors can affect whether the items get properly indexed. The order which works is:
 * Ignore case
@@ -72,7 +75,7 @@ It is important to know that the order of the index processors can affect whethe
 
 ## SSO Login
 
-Single Sign On is only accessible through `/user/login/sso`.
+Single Sign On is only accessible through [http://cms.indstate.edu/user/login/sso](http://cms.indstate.edu/user/login/sso).
 
 A custom module was needed in order for the ldap_sso module to  work with ISU's server settings. The ldap_sso module is expecting a `$_SERVER['REMOTE_USER']` variable which was not produced by ISU's web server. The name of that value was instead, `$_SERVER['PHP_AUTH_USER']` which the ldap_sso module didn't know to look for. The custom module, ldap_sso_authnz was created to set the `$_SERVER['REMOTE_USER']` variable. After setting that variable, the normal ldap_sso_user_login_sso() function is called.
 
@@ -118,7 +121,7 @@ The temporary solution as agreed by all of us this morning, was to continue usin
 
 The location of the settings where non-SSL configuration is set can be found here:
 
- `/admin/config/people/ldap/servers/edit/isu`
+[http://cms.indstate.edu/admin/config/people/ldap/servers/edit/isu](http://cms.indstate.edu/admin/config/people/ldap/servers/edit/isu)
 
 ## Troubleshooting
 Here are a list of potential problems that may arise in the future.
@@ -129,10 +132,10 @@ Here are a list of potential problems that may arise in the future.
 	* Verify that the file name is correct on /admin/config/people/isu_faculty
 * SSO is not working
 	* Check the dblog for ldap errors	 	
-	* If error log doesn't reveal obvious answer, test LDAP connection by going to /admin/config/people/ldap/servers/test/isu and clicking **Test** 
+	* If error log doesn't reveal obvious answer, test LDAP connection by going to [http://cms.indstate.edu/admin/config/people/ldap/servers/test/isu](http://cms.indstate.edu/admin/config/people/ldap/servers/test/isu) and clicking **Test** 
 	* If the test returns LDAP data, you know that an LDAP connection is being made. If not, there is a problem connecting to the LDAP server.
 * Faculty images are not updating
-	* Connect to the ISU VPN and manually type in the url (found here: /admin/config/people/isu_faculty) with a real PIDM number. 
+	* Connect to the ISU VPN and manually type in the url (found [here](http://cms.indstate.edu/admin/config/people/isu_faculty)) with a real PIDM number. 
 	* If no image is loaded from the url, you will know to contact ISU to get further information
 * Faculty profiles aren't appearing in search results
-	* Make sure the nodes are being indexed: `/admin/config/search/search_api/index/faculty` and ensure the processor settings are correct. Information about that can be found [here](#search-index).
+	* Make sure the nodes are being indexed by navigating to [http://cms.indstate.edu/admin/config/search/search_api/index/faculty](http://cms.indstate.edu/admin/config/search/search_api/index/faculty) and ensuring the processor settings are correct. Information about that can be found [here](#search-index).
