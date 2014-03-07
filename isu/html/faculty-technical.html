@@ -26,7 +26,7 @@ img.logo {
 <h2 id="import-process">Import Process</h2>
 <p>Every night, ISU exports faculty data to the following location on the web server <code>/home/ccidman</code></p>
 <p>At <strong>2:00 am</strong>, a Jenkins job copies all files located in the <code>/home/ccidman</code> directory to the <code>/sites/default/files/private/feeds</code> directory. At <strong>3:00 am</strong>, elysia_cron kicks off the isu_faculty_cron job which triggers the Feeds importer 'staff_profiles'. Faculty profiles are then updated in batches based on the job_scheduler cron job.</p>
-<p><img alt="Import" src="file:///Users/kevin/Dropbox/web_projects/imagex-client-docs/isu/markdown/../assets/images/FacultyImport.png" title="Faculty Import" /></p>
+<p><img alt="Import" src="../assets/images/FacultyImport.png" title="Faculty Import" /></p>
 <h2 id="fields">Fields</h2>
 <p>The faculty profile fields that are updated during isu_faculty_cron are followed below. Fields that have custom modifications have explainations provided.</p>
 <ul>
@@ -59,7 +59,7 @@ img.logo {
 <p><code>https://jas.indstate.edu/DisplayBlobServlet/?pidm=[id]</code>.</p>
 <p>The file is saved to the database using a custom function <strong>_file_save_external()</strong>. Because the image format is originally saved in a TIFF format, it is converted to PNG by using the PHP extension ImageMagick. This is also done in the _file_save_external() function.</p>
 <h2 id="syncing-user-to-profile">Syncing User to Profile</h2>
-<p><img alt="LDAP" src="file:///Users/kevin/Dropbox/web_projects/imagex-client-docs/isu/markdown/../assets/images/FacultyLDAPLogin.png" title="LDAP" /></p>
+<p><img alt="LDAP" src="../assets/images/FacultyLDAPLogin.png" title="LDAP" /></p>
 <p>When a user logs in, the LDAP module attempts to sync the Drupal user to an LDAP user. Syncing is performed in the isu_faculty_ldap_user_edit_user_alter() function. This function checks the LDAP user attribute <strong>employeenumber</strong> and attempts to find a faculty profile with field_id that matches. If found, the LDAP sync is successful and the user is given the 'faculty' role and assigned owner of their respective faculty profile node.</p>
 <h2 id="search-index">Search Index</h2>
 <p>Faculty searching on <a href="http://cms.indstate.edu/search/faculty-staff">http://cms.indstate.edu/search/faculty-staff</a> is based on the view <strong>isu_faculty</strong> which is a search_api index view. This means that unless faculty is indexed, no results will appear here.</p>
