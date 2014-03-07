@@ -69,7 +69,7 @@ The Image API URL holds the web address that returns faculty/staff images for th
 
 If the web address changes, you will need to update it in the **Faculty Settings** which can be found by navigating to the [Faculty Settings Page](http://cms.indstate.edu/admin/config/people/isu_faculty)
 
-![Image](../assets/images/ImageLookupURL.png "Image Lookup URL")
+![Image Lookup](../assets/images/ImageLookupUrl.png "Image Lookup URL")
 
 ## Profile Help Description
 
