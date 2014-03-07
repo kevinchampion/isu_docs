@@ -18,7 +18,7 @@
 
 Every night, ISU exports faculty data to the following location on the web server `/home/ccidman`
 
-At **2:00 am**, a Jenkins job copies all files located in the `/home/ccidman` directory to the `/sites/default/files/feeds` directory. At **3:00 am**, elysia_cron kicks off the isu_faculty_cron job which triggers the Feeds importer 'staff_profiles'. Faculty profiles are then updated in batches based on the job_scheduler cron job.
+At **2:00 am**, a Jenkins job copies all files located in the `/home/ccidman` directory to the `/sites/default/files/private/feeds` directory. At **3:00 am**, elysia_cron kicks off the isu_faculty_cron job which triggers the Feeds importer 'staff_profiles'. Faculty profiles are then updated in batches based on the job_scheduler cron job.
 
 ![Import](../assets/images/FacultyImport.png "Faculty Import")
 
@@ -128,7 +128,7 @@ Here are a list of potential problems that may arise in the future.
 
 * **Faculty profiles aren't updating/importing**
 	* Verify that ISU is still updating the files in /home/ccidman
-	* Verify that the Jenkins job is updating /default/files/feeds
+	* Verify that the Jenkins job is updating /default/files/private/feeds
 	* Verify that the file name is correct on /admin/config/people/isu_faculty
 * **SSO is not working**
 	* Check the dblog for ldap errors
