@@ -1,6 +1,7 @@
 # Faculty/Staff Profiles - Administration
 
 * [Updating Faculty Departments](#updating-faculty-departments)
+* [Faculty Profile Taxonomy](#faculty-profile-taxonomy)
 * [Updating your Profile Image](#updating-your-profile-image)
 * [Banner Import File](#banner-import-file)
 * [Image API URL](#image-api-url)
@@ -9,7 +10,7 @@
 
 ## Updating Faculty Departments
 
-There are three faculty taxonomies that affect faculty/staff profiles.
+There are three faculty taxonomies that affect faculty/staff profile departments.
 
 A link to each taxonomy can be found by navigating to [http://cms.indstate.edu/admin/structure/taxonomy](http://cms.indstate.edu/admin/structure/taxonomy)
 
@@ -28,6 +29,16 @@ Below are descriptions of each taxonomy and their intended purpose:
 * **Parent Organization**
 	* This is the **Parent Organization** of the **Faculty Department - Banner** department. On the **Faculty Department - Banner** term, you can select the **Parent Organization** that the Banner department should relate to.
 	* This is also a parent term of the **Faculty Department - Banner** which serves to group Banner departments into colleges/organizations. This relationship was created to allow external sites, such as college sites, to query faculty/staff based on their college.
+
+### Faculty Profile Taxonomy
+In addition to the faculty department and parent organization taxonomies, there are two taxonomy vocabularies that are included in a faculty profile:
+
+* Expertise
+	* [http://cms.indstate.edu/admin/structure/taxonomy/expertise](http://cms.indstate.edu/admin/structure/taxonomy/expertise)	
+* Research Interests
+	*  [http://cms.indstate.edu/admin/structure/taxonomy/research_interests](http://cms.indstate.edu/admin/structure/taxonomy/research_interests)
+
+You can add/update terms by navigating to links above. Faculty/staff members can then select which **Expertise** and **Research Interests** apply to their profile.
 
 ### Updating Scenarios
 1. You want to update the name of an **English** version of a Banner department/You want to update the name of a **Faculty Department**
