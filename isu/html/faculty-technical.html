@@ -1,0 +1,130 @@
+<!DOCTYPE html><html>
+<head><meta charset="UTF-8"><link href='https://dl.dropbox.com/u/57694/documentation/github.css' rel='stylesheet' type='text/css'>
+<style>
+img {
+  zoom:50%;
+}
+img.logo {
+  zoom:100%;
+}
+</style>
+</head><body><p><img class="logo" src="../assets/images/IXM-Transparent-Vertical.jpg" style="float:right; margin:-10px 15px 0 0;" height="90" />
+<img src="../assets/images/isu_logo.png" alt="Indiana State University logo" /></p>
+<a href="index.html">Home</a>
+
+<h1 id="faculty-profiles-technical-document">Faculty Profiles - Technical Document</h1>
+<ul>
+<li><a href="#import-process">Import Process</a></li>
+<li><a href="#fields">Fields</a></li>
+<li><a href="#faculty-images">Faculty Images</a></li>
+<li><a href="#syncing-user-to-profile">Syncing User to Profile</a></li>
+<li><a href="#search-index">Search Index</a></li>
+<li><a href="#sso-login">SSO Login</a></li>
+<li><a href="#ldap-sso-decision">LDAP SSO Decision</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+<h2 id="import-process">Import Process</h2>
+<p>Every night, ISU exports faculty data to the following location on the web server <code>/home/ccidman</code></p>
+<p>At <strong>2:00 am</strong>, a Jenkins job copies all files located in the <code>/home/ccidman</code> directory to the <code>/sites/default/files/feeds</code> directory. At <strong>3:00 am</strong>, elysia_cron kicks off the isu_faculty_cron job which triggers the Feeds importer 'staff_profiles'. Faculty profiles are then updated in batches based on the job_scheduler cron job.</p>
+<p><img alt="Import" src="../assets/images/FacultyImport.png" title="Faculty Import" /></p>
+<h2 id="fields">Fields</h2>
+<p>The faculty profile fields that are updated during isu_faculty_cron are followed below. Fields that have custom modifications have explainations provided.</p>
+<ul>
+<li><strong>title</strong>: the field_first_name and field_last_name create the title</li>
+<li><strong>field_name_prefix</strong>: PZVDIRE_NAME_PREFIX</li>
+<li><strong>field_first_name</strong>: PZVDIRE_NAME_FIRST</li>
+<li><strong>field_middle_name</strong>: PZVDIRE_NAME_MIDDLE</li>
+<li><strong>field_last_name</strong>: PZVDIRE_NAME_LAST</li>
+<li><strong>field_name_suffix</strong>: PZVDIRE_NAME_SUFFIX</li>
+<li><strong>field_job_title</strong>: PZVDIRE_JOB_DESC</li>
+<li><strong>field_id</strong>: PZVDIRE_ID</li>
+<li><strong>field_pidm</strong>: PZVDIRE_PIDM</li>
+<li><strong>field_email</strong>: PZVDIRE_OFFICE_EMAIL</li>
+<li><strong>field_office</strong>: PZVDIRE_OFFICE_STREET_LINE1</li>
+<li><strong>field_telephone</strong>:<ul>
+<li>PZVDIRE_OFFICE_PHONE</li>
+<li>the output of this field has hard-coded area code and three digit prefix if needed.</li>
+</ul>
+</li>
+<li><strong>field_banner_image</strong>: This field is populated by using ISU's image API which is currently in a development state and may be updated. An updatable setting has been added to allow site admins to update the url of the image API in the event that ISU updates their endpoint url. See <a href="#faculty-images">here</a> for more information.</li>
+<li><strong>field_faculty_department_banner</strong>:<ul>
+<li>PZVDIRE_JOB_DEPT</li>
+<li>This taxonomy term_reference has two fields which are used to group data for external use: field_parent_organization and field_faculty_department. These fields are not saved on the faculty content, they are saved in the taxonomy term object.</li>
+</ul>
+</li>
+</ul>
+<h2 id="faculty-images">Faculty Images</h2>
+<h3 id="how-images-are-imported">How images are imported</h3>
+<p>During the faculty profile import, the image file associated with it is downloaded from the ISU image API by accessing the following url:</p>
+<p><code>https://jas.indstate.edu/DisplayBlobServlet/?pidm=[id]</code>.</p>
+<p>The file is saved to the database using a custom function <strong>_file_save_external()</strong>. Because the image format is originally saved in a TIFF format, it is converted to PNG by using the PHP extension ImageMagick. This is also done in the _file_save_external() function.</p>
+<h2 id="syncing-user-to-profile">Syncing User to Profile</h2>
+<p><img alt="LDAP" src="../assets/images/FacultyLDAPLogin.png" title="LDAP" /></p>
+<p>When a user logs in, the LDAP module attempts to sync the Drupal user to an LDAP user. Syncing is performed in the isu_faculty_ldap_user_edit_user_alter() function. This function checks the LDAP user attribute <strong>employeenumber</strong> and attempts to find a faculty profile with field_id that matches. If found, the LDAP sync is successful and the user is given the 'faculty' role and assigned owner of their respective faculty profile node.</p>
+<h2 id="search-index">Search Index</h2>
+<p>Faculty searching on <a href="http://cms.indstate.edu/search/faculty-staff">http://cms.indstate.edu/search/faculty-staff</a> is based on the view <strong>isu_faculty</strong> which is a search_api index view. This means that unless faculty is indexed, no results will appear here.</p>
+<p>The faculty index settings can be found at <a href="http://cms.indstate.edu/admin/config/search/search_api/index/faculty">http://cms.indstate.edu/admin/config/search/search_api/index/faculty</a></p>
+<p>It is important to know that the order of the index processors can affect whether the items get properly indexed. The order which works is:
+<em> Ignore case
+</em> Tokenizer
+<em> Fuzzy Search search settings
+</em> Fuzzy Search excerpt settings</p>
+<h2 id="sso-login">SSO Login</h2>
+<p>Single Sign On is only accessible through <a href="http://cms.indstate.edu/user/login/sso">http://cms.indstate.edu/user/login/sso</a>.</p>
+<p>A custom module was needed in order for the ldap_sso module to  work with ISU's server settings. The ldap_sso module is expecting a <code>$_SERVER['REMOTE_USER']</code> variable which was not produced by ISU's web server. The name of that value was instead, <code>$_SERVER['PHP_AUTH_USER']</code> which the ldap_sso module didn't know to look for. The custom module, ldap_sso_authnz was created to set the <code>$_SERVER['REMOTE_USER']</code> variable. After setting that variable, the normal ldap_sso_user_login_sso() function is called.</p>
+<p>In addition to the custom module, httpd settings were updated to allow for a connection between the web server and the LDAP server. Those settings can be found on the web server in the following locations:</p>
+<p><strong>Production</strong></p>
+<p><code>/etc/httpd/vhost.d/vhost-cms.indstate.edu</code></p>
+<p><strong>Staging</strong></p>
+<p><code>/etc/httpd/vhost.d/vhost-wwwtest.indstate.edu</code></p>
+<p>The settings required for SSO to succeed is:</p>
+<p><code>&lt;Location /user/login/sso&gt;
+    AuthType basic
+    AuthBasicProvider ldap
+    AuthName "ISU - Login using your ISU user name and password"
+    AuthLDAPURL "ldaps://isuad.indstate.edu/OU=ISU Users,DC=isuad,DC=indstate,DC=edu?cn" SSL
+    AuthLDAPBindDN "CN=svcWWWDrupal,OU=Service Accounts,OU=OIT,DC=isuad,DC=indstate,DC=edu"
+    AuthLDAPBindPassword CMSAuthentication4ISU!
+    AuthzLDAPAuthoritative off
+    AuthLDAPRemoteUserAttribute cn
+    Require valid-user
+  &lt;/Location&gt;</code></p>
+<h2 id="ldap-ssl-decision">LDAP SSL Decision</h2>
+<p>It was important to have a secure connection during the SSO process and for the most part, all connections are made securely.</p>
+<p>Here is an excerpt from an email explaining the current SSL situation in regards to LDAP/SSO:</p>
+<p><strong>START OF EMAIL</strong></p>
+<p>The good news is that SSL protocol is initiated during LDAP authentication between the client (ISU user) and server. So it's safe to say that user credentials are safely encrypted during that phase of SSO login. Both the web and LDAP connection protocols are using SSL to encrypt the username/password during the exchange.</p>
+<p>However, we were not able to consistently lookup LDAP user data through SSL with the service account. This is not ideal, but there are lower risks in this connection as the only data passing is basic LDAP user attributes and the credentials for the service account.  The service account should not have any write permissions and is only used to look up LDAP data. In addition, this connection is not client side meaning the exchange happens between the web server and the LDAP server which are both behind ISU's firewall/VPN.</p>
+<p>The temporary solution as agreed by all of us this morning, was to continue using non-SSL to lookup LDAP user attributes (to verify their account name and email) so that the LDAP user can consistently log in to their Drupal account via SSO. We also agreed to continue investigating a resolution to the issue going forward.</p>
+<p><strong>END OF EMAIL</strong></p>
+<p>The location of the settings where non-SSL configuration is set can be found here:</p>
+<p><a href="http://cms.indstate.edu/admin/config/people/ldap/servers/edit/isu">http://cms.indstate.edu/admin/config/people/ldap/servers/edit/isu</a></p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>Here are a list of potential problems that may arise in the future.</p>
+<ul>
+<li><strong>Faculty profiles aren't updating/importing</strong><ul>
+<li>Verify that ISU is still updating the files in /home/ccidman</li>
+<li>Verify that the Jenkins job is updating /default/files/feeds</li>
+<li>Verify that the file name is correct on /admin/config/people/isu_faculty</li>
+</ul>
+</li>
+<li><strong>SSO is not working</strong><ul>
+<li>Check the dblog for ldap errors</li>
+<li>If error log doesn't reveal obvious answer, test LDAP connection by going to <a href="http://cms.indstate.edu/admin/config/people/ldap/servers/test/isu">http://cms.indstate.edu/admin/config/people/ldap/servers/test/isu</a> and clicking <strong>Test</strong></li>
+<li>If the test returns LDAP data, you know that an LDAP connection is being made. If not, there is a problem connecting to the LDAP server.</li>
+</ul>
+</li>
+<li><strong>Faculty images are not updating</strong><ul>
+<li>Connect to the ISU VPN and manually type in the url (found <a href="http://cms.indstate.edu/admin/config/people/isu_faculty">here</a>) with a real PIDM number.</li>
+<li>If no image is loaded from the url, you will know to contact ISU to get further information</li>
+</ul>
+</li>
+<li><strong>Faculty profiles aren't appearing in search results</strong><ul>
+<li>Make sure the nodes are being indexed by navigating to <a href="http://cms.indstate.edu/admin/config/search/search_api/index/faculty">http://cms.indstate.edu/admin/config/search/search_api/index/faculty</a> and ensuring the processor settings are correct. Information about that can be found <a href="#search-index">here</a>.</li>
+</ul>
+</li>
+</ul>
+<p><p style="margin-top:150px; text-align:right; font-size:90%;">Created on March 06, 2014<br />
+  Last modified on March 06, 2014<br />
+  Authored by Gray Sadler</p></p>
+</body>

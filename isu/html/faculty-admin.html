@@ -1,0 +1,98 @@
+<!DOCTYPE html><html>
+<head><meta charset="UTF-8"><link href='https://dl.dropbox.com/u/57694/documentation/github.css' rel='stylesheet' type='text/css'>
+<style>
+img {
+  zoom:50%;
+}
+img.logo {
+  zoom:100%;
+}
+</style>
+</head><body><p><img class="logo" src="../assets/images/IXM-Transparent-Vertical.jpg" style="float:right; margin:-10px 15px 0 0;" height="90" />
+<img src="../assets/images/isu_logo.png" alt="Indiana State University logo" /></p>
+<a href="index.html">Home</a>
+
+<h1 id="facultystaff-profiles-administration">Faculty/Staff Profiles - Administration</h1>
+<ul>
+<li><a href="#updating-faculty-departments">Updating Faculty Departments</a></li>
+<li><a href="#updating-your-profile-image">Updating your Profile Image</a></li>
+<li><a href="#banner-import-file">Banner Import File</a></li>
+<li><a href="#image-api-url">Image API URL</a></li>
+<li><a href="#profile-help-description">Profile Help Description</a></li>
+<li><a href="#profile-help-url">Profile Help URL</a></li>
+</ul>
+<h2 id="updating-faculty-departments">Updating Faculty Departments</h2>
+<p>There are three faculty taxonomies that affect faculty/staff profiles.</p>
+<p>A link to each taxonomy can be found by navigating to <a href="http://cms.indstate.edu/admin/structure/taxonomy">http://cms.indstate.edu/admin/structure/taxonomy</a></p>
+<p><img alt="Faculty Taxonomies" src="../assets/images/TaxonomyVocabList.png" title="Faculty Taxonomies" /></p>
+<p>Below are descriptions of each taxonomy and their intended purpose:</p>
+<ul>
+<li><strong>Faculty Department - Banner</strong><ul>
+<li>Notice the word <strong>Banner</strong> in the taxonomy name. This is because these terms are the departments that come directly from <strong>Banner</strong>.</li>
+<li>Terms in this taxonomy are automatically created during the faculty/staff import. This is the term that is associated with each faculty/staff profile. It is hidden from view and cannot be updated because this information comes directly from the Banner import file.</li>
+<li>Inside this taxonomy are two additional fields which define a relationship to the taxonomies <strong>Faculty Department</strong> and <strong>Parent Organization</strong>.</li>
+</ul>
+</li>
+<li><strong>Faculty Department</strong><ul>
+<li>This is the <strong>English</strong> version of the <strong>Banner</strong> department. On the <strong>Faculty Department - Banner</strong> term, you can select the <strong>Faculty Department</strong> that the Banner department should relate to.</li>
+<li>This is the department that is displayed on Faculty/Staff profiles.</li>
+<li>This is a parent term of the <strong>Faculty Department - Banner</strong> which allows multiple Banner departments to share the same parent department. An example of this would be the <strong>Networks Financial Institute</strong>. It is a single department, but there are multiple Banner departments that make up this department. For example, NETWORKS, Networks-Research and Networks-Student Scholarships make up this department.</li>
+</ul>
+</li>
+<li><strong>Parent Organization</strong><ul>
+<li>This is the <strong>Parent Organization</strong> of the <strong>Faculty Department - Banner</strong> department. On the <strong>Faculty Department - Banner</strong> term, you can select the <strong>Parent Organization</strong> that the Banner department should relate to.</li>
+<li>This is also a parent term of the <strong>Faculty Department - Banner</strong> which serves to group Banner departments into colleges/organizations. This relationship was created to allow external sites, such as college sites, to query faculty/staff based on their college.</li>
+</ul>
+</li>
+</ul>
+<h3 id="updating-scenarios">Updating Scenarios</h3>
+<ol>
+<li>You want to update the name of an <strong>English</strong> version of a Banner department/You want to update the name of a <strong>Faculty Department</strong><ul>
+<li>Navigate to <a href="http://cms.indstate.edu/admin/structure/taxonomy/faculty_department">http://cms.indstate.edu/admin/structure/taxonomy/faculty_department</a></li>
+<li>Locate the department you want to update</li>
+<li>Click <strong>edit</strong> to open the edit form</li>
+<li>Change the <strong>Name</strong> of the department</li>
+<li>Click <strong>Save</strong></li>
+</ul>
+</li>
+<li>You want to change the <strong>Faculty Department</strong> a Banner Department is associated with.<ul>
+<li>Navigate to <a href="http://cms.indstate.edu/admin/structure/taxonomy/faculty_department_banner">http://cms.indstate.edu/admin/structure/taxonomy/faculty_department_banner</a></li>
+<li>Locate the Banner department you want to update</li>
+<li>Click <strong>edit</strong> to open the edit form</li>
+<li>In the <strong>Department</strong> drop down, update the <strong>Department</strong> associated with this Banner department.</li>
+</ul>
+</li>
+<li>You want to update the college associated with a Banner department.<ul>
+<li>Navigate to <a href="http://cms.indstate.edu/admin/structure/taxonomy/faculty_department_banner">http://cms.indstate.edu/admin/structure/taxonomy/faculty_department_banner</a></li>
+<li>Locate the Banner department you want to update</li>
+<li>Click <strong>edit</strong> to open the edit form</li>
+<li>In the <strong>Parent Organization</strong> drop down, update the <strong>Parent Organization</strong> to the college associated with this Banner department.</li>
+</ul>
+</li>
+</ol>
+<h2 id="updating-your-profile-image">Updating your Profile Image</h2>
+<p>If you have an adequate role, you can use an alternate image for your Faculty/Staff profile.</p>
+<p>On the <a href="http://cms.indstate.edu/admin/faculty-edit">Update Faculty Profile</a> page, scroll down below the normal Banner Image and you should have an option to add or update the <strong>Override Banner Image</strong> field.</p>
+<p><img alt="OverrideBannerImage" src="../assets/images/OverrideBannerImage.png" title="Override Banner Image" /></p>
+<h2 id="banner-import-file">Banner Import File</h2>
+<p>The Banner Import file holds data that will import nightly and create/update faculty/staff profiles. It is important that the website knows the name of this file so that imports will not be interrupted.</p>
+<p>If the name of the file has changed, you will need to update it in the <strong>Faculty Settings</strong> which can be found by nagivating to the <a href="http://cms.indstate.edu/admin/config/people/isu_faculty">Faculty Settings Page</a></p>
+<p><img alt="Image" src="../assets/images/BannerFileLocation.png" title="Banner File Location" /></p>
+<h2 id="image-api-url">Image API URL</h2>
+<p>The Image API URL holds the web address that returns faculty/staff images for their respective profile.</p>
+<p>If the web address changes, you will need to update it in the <strong>Faculty Settings</strong> which can be found by navigating to the <a href="http://cms.indstate.edu/admin/config/people/isu_faculty">Faculty Settings Page</a></p>
+<p><img alt="Image Lookup" src="../assets/images/ImageLookupUrl.png" title="Image Lookup URL" /></p>
+<h2 id="profile-help-description">Profile Help Description</h2>
+<p><img alt="Image" src="../assets/images/ProfileHelpDescExample.png" title="Profile Help Description" /></p>
+<p>You can update the message above by navigating to the <a href="http://cms.indstate.edu/admin/config/people/isu_faculty">Faculty Settings Page</a>
+and updating the <strong>Profile help description</strong></p>
+<p>Use the <strong>@here</strong> placeholder as a link to the <strong>Basic page</strong> that will hold instructions on how the faculty/staff can update their Banner information.</p>
+<p><img alt="Image" src="../assets/images/ProfileHelpDesc.png" title="Profile Help Description" /></p>
+<h2 id="profile-help-url">Profile Help URL</h2>
+<p><img alt="Image" src="../assets/images/ProfileHelpURLExample.png" title="Profile Help URL" />
+This is the link to the <strong>Basic page</strong> that holds instruction on how the faculty/staff can update their Banner information.</p>
+<p><img alt="Image" src="../assets/images/ProfileHelpURL.png" title="Profile Help URL" /></p>
+<p style="margin-top:150px; text-align:right; font-size:90%;">Created on March 06, 2014<br />
+Last modified on March 06, 2014<br />
+Authored by Gray Sadler</p>
+</body>

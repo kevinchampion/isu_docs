@@ -12,9 +12,9 @@
 ## How to log in
 
 1. Navigate to the following page:
-	
+
 	[cms.indstate.edu/user/login/sso](http://cms.indstate.edu/user/login/sso)
-	
+
 2. Enter the ISU network credentials for your account
 3. Once your username and password have been verified, you will be logged in.
 
@@ -37,7 +37,7 @@ On this form you may only update the following fields:
 * Expertise
 * Research Interests
 
-You may not update the fields that are disabled which includes your profile image. 
+You may not update the fields that are disabled which includes your profile image.
 
 These fields include:
 
@@ -51,3 +51,9 @@ These fields include:
 Should you want to update the above fields, you will need to follow the instructions linked to in the description of the field.
 
 Once you've updated your profile, click **Save** at the bottom of the page.
+
+
+
+<p style="margin-top:150px; text-align:right; font-size:90%;">Created on March 06, 2014<br />
+Last modified on March 06, 2014<br />
+Authored by Gray Sadler</p>

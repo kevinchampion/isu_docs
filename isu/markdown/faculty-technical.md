@@ -38,8 +38,8 @@ The faculty profile fields that are updated during isu_faculty_cron are followed
 * **field_pidm**: PZVDIRE_PIDM
 * **field_email**: PZVDIRE_OFFICE_EMAIL
 * **field_office**: PZVDIRE_OFFICE_STREET_LINE1
-* **field_telephone**: 
-	* PZVDIRE_OFFICE_PHONE 
+* **field_telephone**:
+	* PZVDIRE_OFFICE_PHONE
 	* the output of this field has hard-coded area code and three digit prefix if needed.
 * **field_banner_image**: This field is populated by using ISU's image API which is currently in a development state and may be updated. An updatable setting has been added to allow site admins to update the url of the image API in the event that ISU updates their endpoint url. See [here](#faculty-images) for more information.
 * **field_faculty_department_banner**:
@@ -79,7 +79,7 @@ Single Sign On is only accessible through [http://cms.indstate.edu/user/login/ss
 
 A custom module was needed in order for the ldap_sso module to  work with ISU's server settings. The ldap_sso module is expecting a `$_SERVER['REMOTE_USER']` variable which was not produced by ISU's web server. The name of that value was instead, `$_SERVER['PHP_AUTH_USER']` which the ldap_sso module didn't know to look for. The custom module, ldap_sso_authnz was created to set the `$_SERVER['REMOTE_USER']` variable. After setting that variable, the normal ldap_sso_user_login_sso() function is called.
 
-In addition to the custom module, httpd settings were updated to allow for a connection between the web server and the LDAP server. Those settings can be found on the web server in the following locations: 
+In addition to the custom module, httpd settings were updated to allow for a connection between the web server and the LDAP server. Those settings can be found on the web server in the following locations:
 
 **Production**
 
@@ -105,7 +105,7 @@ The settings required for SSO to succeed is:
 
 ## LDAP SSL Decision
 
-It was important to have a secure connection during the SSO process and for the most part, all connections are made securely. 
+It was important to have a secure connection during the SSO process and for the most part, all connections are made securely.
 
 Here is an excerpt from an email explaining the current SSL situation in regards to LDAP/SSO:
 
@@ -113,7 +113,7 @@ Here is an excerpt from an email explaining the current SSL situation in regards
 
 The good news is that SSL protocol is initiated during LDAP authentication between the client (ISU user) and server. So it's safe to say that user credentials are safely encrypted during that phase of SSO login. Both the web and LDAP connection protocols are using SSL to encrypt the username/password during the exchange.
 
-However, we were not able to consistently lookup LDAP user data through SSL with the service account. This is not ideal, but there are lower risks in this connection as the only data passing is basic LDAP user attributes and the credentials for the service account.  The service account should not have any write permissions and is only used to look up LDAP data. In addition, this connection is not client side meaning the exchange happens between the web server and the LDAP server which are both behind ISU's firewall/VPN.  
+However, we were not able to consistently lookup LDAP user data through SSL with the service account. This is not ideal, but there are lower risks in this connection as the only data passing is basic LDAP user attributes and the credentials for the service account.  The service account should not have any write permissions and is only used to look up LDAP data. In addition, this connection is not client side meaning the exchange happens between the web server and the LDAP server which are both behind ISU's firewall/VPN.
 
 The temporary solution as agreed by all of us this morning, was to continue using non-SSL to lookup LDAP user attributes (to verify their account name and email) so that the LDAP user can consistently log in to their Drupal account via SSO. We also agreed to continue investigating a resolution to the issue going forward.
 
@@ -131,11 +131,16 @@ Here are a list of potential problems that may arise in the future.
 	* Verify that the Jenkins job is updating /default/files/feeds
 	* Verify that the file name is correct on /admin/config/people/isu_faculty
 * **SSO is not working**
-	* Check the dblog for ldap errors	 	
-	* If error log doesn't reveal obvious answer, test LDAP connection by going to [http://cms.indstate.edu/admin/config/people/ldap/servers/test/isu](http://cms.indstate.edu/admin/config/people/ldap/servers/test/isu) and clicking **Test** 
+	* Check the dblog for ldap errors
+	* If error log doesn't reveal obvious answer, test LDAP connection by going to [http://cms.indstate.edu/admin/config/people/ldap/servers/test/isu](http://cms.indstate.edu/admin/config/people/ldap/servers/test/isu) and clicking **Test**
 	* If the test returns LDAP data, you know that an LDAP connection is being made. If not, there is a problem connecting to the LDAP server.
 * **Faculty images are not updating**
-	* Connect to the ISU VPN and manually type in the url (found [here](http://cms.indstate.edu/admin/config/people/isu_faculty)) with a real PIDM number. 
+	* Connect to the ISU VPN and manually type in the url (found [here](http://cms.indstate.edu/admin/config/people/isu_faculty)) with a real PIDM number.
 	* If no image is loaded from the url, you will know to contact ISU to get further information
 * **Faculty profiles aren't appearing in search results**
 	* Make sure the nodes are being indexed by navigating to [http://cms.indstate.edu/admin/config/search/search_api/index/faculty](http://cms.indstate.edu/admin/config/search/search_api/index/faculty) and ensuring the processor settings are correct. Information about that can be found [here](#search-index).
+
+
+  <p style="margin-top:150px; text-align:right; font-size:90%;">Created on March 06, 2014<br />
+  Last modified on March 06, 2014<br />
+  Authored by Gray Sadler</p>
